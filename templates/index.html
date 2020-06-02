@@ -1,56 +1,7 @@
-<!DOCTYPE html>
-<html lang="ko">
+{% set title = "main | Digital Twin" %}
+{% extends "./layout/base.html" %} 
+{% block contents%}  
 
-<head>
-
-  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://digitaltwin.deu.ac.kr">
-  <meta property="og:title" content="Digital Twin">
-  <meta property="og:description" content="Digital Twin Laboratory 홈페이지">
-  <meta property="og:image" content="http://digitaltwin.deu.ac.kr/img/icon/AI.png">
-  <meta charset=" utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Digital Twin Laboratory</title>
-  <!-- 참조링크 -->
-  <link href="http://fonts.googleapis.com/earlyaccess/nanumpenscript.css" rel="stylesheet">
-  <style>
-    .np {
-      font-family: 'Nanum Pen Script', cursive;
-    }
-
-    @font-face {
-      font-family: 'BMDOHYEON';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-    }
-  </style>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
-    type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-
-
-  <!-- Custom styles for this template -->
-  <link href="css/agency.min.css" rel="stylesheet">
-
-</head>
-
-<body id="page-top" oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -1045,6 +996,4 @@
     })
   </script>
 
-</body>
-
-</html>
+{% endblock %}
