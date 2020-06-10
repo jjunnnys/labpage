@@ -1,0 +1,11 @@
+{% macro pcLink( href , text, current_url ) %}
+<li class="menu__item">
+  <a href="{{ href }}">{{ text }}</a>
+</li>
+{% endmacro %} {% macro mobileLink( href , text, current_url ) %}
+<li class="menu__item">
+  <a href="{{ href }}">
+    {{ text }}
+  </a>
+</li>
+{% endmacro %}

@@ -1,6 +1,6 @@
-const express = require("express");
-const nunjucks = require("nunjucks");
-const bodyParser = require("body-parser");
+const express = require('express');
+const nunjucks = require('nunjucks');
+const bodyParser = require('body-parser');
 
 class App {
   constructor() {
@@ -35,14 +35,14 @@ class App {
   }
 
   setViewEngine() {
-    nunjucks.configure("templates", {
+    nunjucks.configure('templates', {
       autoescape: true,
       express: this.app,
     });
   }
 
   setStatic() {
-    this.app.use(express.static("public"));
+    this.app.use(express.static('public'));
   }
 
   setLocals() {
@@ -55,7 +55,7 @@ class App {
   }
 
   getRouting() {
-    this.app.use(require("./controllers"));
+    this.app.use(require('./controllers'));
   }
 
   //   status404() {

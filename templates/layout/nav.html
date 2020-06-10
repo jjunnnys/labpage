@@ -1,0 +1,46 @@
+<nav class="nav">
+  <div class="nav__column">
+    <div class="nav__logo">
+      <a href="/" class="nav__logo-link">
+        Digital Twin
+      </a>
+    </div>
+  </div>
+  <div class="nav__column">
+    <div class="nav__contents">
+      <ul class="nav__menu menu">
+        {% from "macro/link.html" import pcLink %} {{ pcLink('./digitalTwin' ,
+        "DIGITAL TWIN?" , req_path ) }} {{ pcLink('./research' , "RESEARCH" ,
+        req_path ) }} {{ pcLink('./gallery' , "GALLERY" , req_path ) }} {{
+        pcLink('./member' , "MEMBER" , req_path ) }} {{ pcLink( './contact'
+        ,"CONTACT" , req_path ) }}
+      </ul>
+    </div>
+    <div class="nav__user">
+      <button class="nav__user-btn">
+        <img src="/img/team/4.jpg" alt="" />
+      </button>
+    </div>
+  </div>
+  <div class="nav__column">
+    <div class="mobile">
+      <input type="checkbox" id="menuToggle" />
+      <label for="menuToggle" class="mobile__menu-open">
+        <div class="open"></div>
+      </label>
+
+      <div class="mobile__menu menu--effects">
+        <label for="menuToggle"></label>
+        <div class="mobile__menu-content">
+          <ul class="nav__menu menu">
+            {% from "macro/link.html" import mobileLink %} {{ mobileLink(
+            './digitalTwin' , "DIGITAL TWIN?", req_path ) }} {{ mobileLink(
+            './research' , "RESEARCH" , req_path ) }} {{ mobileLink( './gallery'
+            , "GALLERY" , req_path ) }} {{ mobileLink( './member' ,"MEMBER" ,
+            req_path ) }} {{ mobileLink( './contact' ,"CONTACT" , req_path ) }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -41,6 +41,7 @@
 
     <!-- 폰트링크 -->
     <script
+      defer
       src="https://kit.fontawesome.com/cd5e56d4b7.js"
       crossorigin="anonymous"
     ></script>
@@ -66,7 +67,9 @@
     />
 
     <!-- css -->
-    <link href="css/agency.min.css" rel="stylesheet" />
+    {% block css %} {% endblock%}
+    <!-- js -->
+    {% block script %} {% endblock%}
   </head>
   <body
     id="page-top"
@@ -74,6 +77,6 @@
     ondragstart="return false"
     onselectstart="return false"
   >
-    {% block contents%} {% endblock %}
+    {% include "./nav.html" %} {% block contents%} {% endblock %}
   </body>
 </html>
