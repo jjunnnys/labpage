@@ -2,8 +2,12 @@
 <html lang="ko">
   <head>
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="img/logos/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="img/logos/favicon.ico" type="image/x-icon" />
 
     <!-- 카톡 미리보기 이미지 -->
     <meta property="og:type" content="website" />
@@ -23,6 +27,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <meta name="keywords" content="Digital Twin" />
     <meta
       name="description"
       content="동의대학교 Digital Twin 연구실 홈페이지입니다."
@@ -41,7 +46,6 @@
 
     <!-- 폰트링크 -->
     <script
-      defer
       src="https://kit.fontawesome.com/cd5e56d4b7.js"
       crossorigin="anonymous"
     ></script>
@@ -69,6 +73,8 @@
     <!-- css -->
     {% block css %} {% endblock%}
     <!-- js -->
+    <script defer src="js/event/ScrollTrigger.min.js"></script>
+    <script defer src="js/event/showSection.js"></script>
     {% block script %} {% endblock%}
   </head>
   <body

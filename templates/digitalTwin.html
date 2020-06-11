@@ -1,25 +1,61 @@
 {% set title = "digital twin? | Digital Twin" %} {% extends "./layout/base.html"
 %} {% block css %}
 <link rel="stylesheet" href="css/digitalTwin.css" />
-{% endblock %} {% block script %} {% endblock %} {% block contents%}
+{% endblock %} {% block script %}
+<script defer type="module" src="js/digitalTwin/digitalTwin.js"></script>
+{% endblock %} {% block contents%} {% from "macro/link.html" import bgWrapper %}
+{{ bgWrapper("What?") }}
+<div class="rotateImg js-rotateImg">
+  <img src="img/digitalTwin/rotate.png" alt="rotate" />
+</div>
 <main class="digitalTwin">
-  <div class="digitalTwin__wrapper">
-    <div class="digitalTwin__header"></div>
-    <section class="digitalTwin__img dt-img">
-      <div class="dt-img__column"></div>
-      <div class="dt-img__column"></div>
-      <div class="dt-img__column"></div>
-    </section>
-    <section class="digitalTwin__icon dt-icon">
-      <div class="dt-icon__slider"></div>
-      <div class="dt-icon__slider"></div>
-      <div class="dt-icon__slider"></div>
-      <div class="dt-icon__slider"></div>
-      <div class="dt-icon__slider"></div>
-      <div class="dt-icon__slider"></div>
-    </section>
-  </div>
-  <div class="container">
+  <section class="digitalTwin__header dt-header">
+    <div class="dt-header__title">what is digital twin?</div>
+    <div class="dt-header__sub-title">
+      컴퓨팅 사이버상에 현실 사물의 쌍둥이 객체인 가상실체를 만들고, 현실에서
+      발생할 수 있는 상황을 컴퓨터로 시뮬레이션 하여 결과를 미리 예측 / 최적화
+      하는 응용 기술
+    </div>
+  </section>
+  <section data-scroll class="digitalTwin__img dt-img">
+    <div class="dt-img__column">
+      <div class="dt-img__reality reality">
+        <span class="reality__contents">고장 분석</span>
+        <span class="reality__contents">실시간 운영 데이터</span>
+        <span class="reality__contents">CAD 모델</span>
+        <span class="reality__contents">유한요소해석</span>
+        <span class="reality__contents">종합 데이터</span>
+        <span class="reality__contents">운영 이력</span>
+        <span class="reality__contents">유지보수 이력</span>
+        <span class="reality__contents">기타 정보 등...</span>
+        <img src="img/digitalTwin/DT.png" alt="car" />
+      </div>
+    </div>
+    <div class="dt-img__column">
+      <div class="dt-img__virtual virtual">
+        <span class="virtual__contents"
+          >운영 조건, 최적화, 고장진단 / 예측 등...</span
+        >
+        <span class="virtual__contents">사건 모델</span>
+        <span class="virtual__contents">물리기반 모델</span>
+        <span class="virtual__contents">통계적 모델</span>
+        <span class="virtual__contents">기계학습</span>
+        <span class="virtual__contents">기타 정보 등...</span>
+        <img src="img/digitalTwin/DT-virtual.png" alt="car" />
+      </div>
+    </div>
+    <div class="dt-img__column"></div>
+  </section>
+  <section data-scroll class="digitalTwin__icon dt-icon">
+    <div class="dt-icon__slider"></div>
+    <div class="dt-icon__slider"></div>
+    <div class="dt-icon__slider"></div>
+    <div class="dt-icon__slider"></div>
+    <div class="dt-icon__slider"></div>
+    <div class="dt-icon__slider"></div>
+  </section>
+
+  <!-- <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading text-uppercase">What is digital twin?</h2>
@@ -90,6 +126,6 @@
         </h5>
       </div>
     </div>
-  </div>
+  </div> -->
 </main>
 {% endblock %}
