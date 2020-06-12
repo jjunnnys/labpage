@@ -9,10 +9,26 @@
   justify-content: space-around;
   align-items: center;
   color: #f1f3f5;
-  font-family: ;
+  font-family: 'Sunflower', sans-serif;
 }
 
 .footer__column img {
   width: 3rem;
   height: 3rem;
+}
+
+.footer .footer__column:nth-child(1) {
+  font-size: 1.25rem;
+}
+
+.footer .footer__column:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer__column:nth-child(3) span {
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
 }
