@@ -6,8 +6,6 @@ const dtImg = document.querySelector('.digitalTwin__img');
 const reality = document.querySelector('.reality');
 const virtual = document.querySelector('.virtual');
 
-console.log(reality, virtual);
-
 let last_known_scroll_position = 0;
 let ticking = false;
 
@@ -25,7 +23,6 @@ const secondSection = (scroll_pos) => {
 };
 
 const firstSection = (scroll_pos) => {
-  console.log(scroll_pos);
   let opacityValue =
     scroll_pos <= 1000 ? parseFloat((1 - scroll_pos / 1000).toFixed(2)) : 0;
   let scaleValue =

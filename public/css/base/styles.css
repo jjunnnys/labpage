@@ -155,3 +155,17 @@ main {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
+
+@media screen and (max-width: 375px) {
+  .bg-wrapper .bg-wrapper__text {
+    font-size: 20vw;
+  }
+  .bgTextOut {
+    font-size: 20vw;
+  }
+
+  .bg-wrapper .bg-wrapper__text::before {
+    top: -5%;
+    transform: translate(1.25vw, 0) skew(-13deg) scale(1, 1.2);
+  }
+}
