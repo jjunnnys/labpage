@@ -1,5 +1,14 @@
 @import './base/styles.css';
 
+body {
+  height: 100vh;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
