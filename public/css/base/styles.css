@@ -25,9 +25,9 @@ body::-webkit-scrollbar-thumb {
 
 * {
   box-sizing: border-box;
-  outline: none;
 }
-*:focus {
+
+button:focus {
   outline: none;
 }
 
@@ -51,7 +51,7 @@ main {
 .bg-wrapper {
   font-family: 'Black Han Sans', sans-serif;
   position: fixed;
-  top: 60%;
+  top: 50%;
   left: 0;
   margin: 0 auto;
   width: 100%;
@@ -61,7 +61,7 @@ main {
 .bg-wrapper .bg-wrapper__text {
   text-transform: uppercase;
   transform: skew(20deg) rotate(-15deg);
-  font-size: 13vw;
+  font-size: 10vw;
   color: rgba(2, 87, 167, 0.5);
   text-shadow: 1px 4px 6px #868e96, 0 0 0 #364fc7, 1px 4px 6px #868e96;
   text-rendering: optimizeLegibility;
@@ -69,7 +69,7 @@ main {
 .bgTextOut {
   text-transform: uppercase;
   transform: skew(20deg) rotate(-15deg);
-  font-size: 13vw;
+  font-size: 10vw;
   color: rgba(2, 87, 167, 0.5);
   text-shadow: 1px 4px 6px #868e96, 0 0 0 #364fc7, 1px 4px 6px #868e96;
   text-rendering: optimizeLegibility;
@@ -80,15 +80,15 @@ main {
   position: absolute;
   left: 0;
   top: 0;
-  top: -4.8%;
+  top: -5.4%;
   overflow: hidden;
   width: 100%;
   height: 45%;
   color: #ced4da;
-  transform: translate(0.83vw, 0) skew(-13deg) scale(1, 1.2);
+  transform: translate(0.68vw, 0) skew(-13deg) scale(1, 1.2);
   z-index: 2;
   text-shadow: 0 0 5px rgba(0, 0, 0, 1), 2px -1px 6px rgba(0, 0, 0, 0.2);
-  transition: top 1s, transform 1s;
+  transition: top 3s, transform 3s;
 }
 .bgTextOut::before {
   content: attr(data-heading);
@@ -100,9 +100,10 @@ main {
   width: 100%;
   height: 45%;
   color: #868e96;
+  transform: none;
   z-index: 2;
   text-shadow: 2px -1px 6px rgba(0, 0, 0, 0.2);
-  transition: top 0.3s, transform 0.3s;
+  transition: top 3s, transform 3s;
 }
 
 .bg-wrapper .bg-wrapper__text::after {

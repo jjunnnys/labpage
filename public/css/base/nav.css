@@ -58,7 +58,7 @@
   padding: 1rem;
   color: #339af0;
   transform: scale(1.2);
-  text-shadow: 0px 1px 10px #e3fafc, 0px -1px 1.5em #212529;
+  text-shadow: 0px 0px 5px #e3fafc, 0px -1px 1.5em #212529;
 }
 
 .nav__user .nav__user-btn {

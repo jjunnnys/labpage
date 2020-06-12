@@ -19,15 +19,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  animation: showRotateImg 0.5s ease-in-out forwards;
-  animation-delay: 1s;
+  transition: transform 0.5s linear, opacity 0.5s linear;
 }
 
 .rotateImg img {
   width: 10%;
   height: 10%;
-  transition: transform 0.3s linear;
+  opacity: 0;
+  animation: showRotateImg 0.5s forwards;
+  animation-delay: 1s;
 }
 
 .digitalTwin {
@@ -35,16 +35,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  scroll-behavior: smooth;
 }
 .digitalTwin section:nth-child(1) {
   height: 1300px;
 }
 .digitalTwin section:nth-child(2) {
-  height: 1400px;
+  height: 1800px;
 }
-.digitalTwin section:nth-child(3) {
-  height: 1400px;
-  border: 5px dashed darkblue;
+.digitalTwin section:nth-child(2) {
+  height: 1500px;
 }
 
 .digitalTwin .digitalTwin__header {
@@ -75,7 +75,7 @@
   font-family: 'Do Hyeon', sans-serif;
   font-size: 2rem;
   text-decoration: wavy underline;
-  text-decoration-color: rgba(240, 62, 62, 0.3);
+  text-decoration-color: #0257a7;
   line-height: 3rem;
   color: #ced4da;
   width: 80%;
@@ -107,13 +107,13 @@
 .dt-img__column .reality {
   position: relative;
   transform: scale(1);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s;
 }
 
 .reality--opacity {
   position: relative;
   transform: scale(0);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s;
 }
 
 .dt-img__column img {
@@ -183,13 +183,13 @@
 .dt-img__column .virtual {
   position: relative;
   transform: scale(1);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s;
 }
 
 .virtual--opacity {
   position: relative;
   transform: scale(0);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s;
 }
 
 .dt-img__column img {
@@ -236,4 +236,74 @@
 .virtual__contents:nth-child(6) {
   bottom: 40%;
   right: 0;
+}
+
+.digitalTwin__icon {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+
+.dt-icon__column:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.dt-icon__column:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+.dt-icon__column:nth-child(3) {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dt-icon__column:nth-child(1) p {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 3rem;
+  margin-top: 3rem;
+  color: #f1f3f5;
+}
+
+.dt-icon__slider span {
+  font-size: 2rem;
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+.dt-icon__column:nth-child(2) .dt-icon__slider {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}
+.dt-icon__column:nth-child(3) .dt-icon__slider {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+}
+
+.digitalTwin__icon .dt-icon__slider img {
+  width: 30%;
+  height: 30%;
+  opacity: 0.7;
+  transition: transform 0.3s, opacity 0.5s;
+  cursor: pointer;
+}
+
+.dt-icon__slider img:hover {
+  opacity: 0.8;
+  transform: rotate(5deg);
+}
+
+.dt-icon__slider img:active {
+  opacity: 1;
+  transform: scale(1.5);
 }

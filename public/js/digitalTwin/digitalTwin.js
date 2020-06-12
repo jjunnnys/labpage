@@ -1,27 +1,31 @@
-const rotateImg = document.querySelector('.js-rotateImg'),
-  bgWrapper = document.querySelector('.bg-wrapper'),
-  bgWrapperText = document.querySelector('.bg-wrapper__text'),
-  dtHeader = document.querySelector('.digitalTwin__header'),
-  dtImg = document.querySelector('.digitalTwin__img'),
-  DT = document.querySelectorAll('.dt-img__column'),
-  realityContents = document.querySelectorAll('.reality__contents'),
-  virtualContents = document.querySelectorAll('.virtual__contents');
+const rotateImg = document.querySelector('.js-rotateImg');
+const bgWrapper = document.querySelector('.bg-wrapper');
+const bgWrapperText = document.querySelector('.bg-wrapper__text');
+const dtHeader = document.querySelector('.digitalTwin__header');
+const dtImg = document.querySelector('.digitalTwin__img');
+const DT = document.querySelectorAll('.dt-img__column');
 
-console.log(realityContents, virtualContents);
+console.log(rotateImg.childNodes[1]);
+
 let last_known_scroll_position = 0;
 let ticking = false;
 
 const secondSection = (scroll_pos) => {
-  if (scroll_pos >= 1100 && scroll_pos < 1800) {
-    DT[1].classList.remove('virtual');
+  if (scroll_pos >= 0 && scroll_pos < 1800) {
     DT[1].classList.add('virtual--opacity');
-    DT[0].classList.remove('reality--opacity');
+    DT[1].classList.remove('virtual');
     DT[0].classList.add('reality');
-  } else {
-    DT[0].classList.remove('reality');
+    DT[0].classList.remove('reality--opacity');
+  } else if (scroll_pos >= 1800 && scroll_pos < 2300) {
     DT[0].classList.add('reality--opacity');
-    DT[1].classList.remove('virtual--opacity');
+    DT[0].classList.remove('reality');
     DT[1].classList.add('virtual');
+    DT[1].classList.remove('virtual--opacity');
+  } else {
+    DT[0].classList.add('reality--opacity');
+    DT[0].classList.remove('reality');
+    DT[1].classList.add('virtual--opacity');
+    DT[1].classList.remove('virtual');
   }
 };
 
@@ -36,7 +40,11 @@ const firstSection = (scroll_pos) => {
 };
 
 const bgImg = (scroll_pos) => {
-  rotateImg.childNodes[1].style = `transform: rotate(${scroll_pos}deg)`;
+  if (scroll_pos > 2400) {
+    rotateImg.style = `opacity:0; transform: rotate(${scroll_pos}deg)`;
+  } else {
+    rotateImg.style = `opacity:1; transform: rotate(${scroll_pos}deg)`;
+  }
 };
 
 const bgText = (scroll_pos) => {
