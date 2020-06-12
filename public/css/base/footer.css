@@ -4,10 +4,12 @@
   left: -3rem;
   width: 100vw;
   padding: 1rem 0;
-  background-color: #ddd;
+  background-color: #343a40;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: #f1f3f5;
+  font-family: ;
 }
 
 .footer__column img {
