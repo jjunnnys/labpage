@@ -38,13 +38,13 @@
   scroll-behavior: smooth;
 }
 .digitalTwin section:nth-child(1) {
-  height: 1300px;
+  height: 150vh;
 }
 .digitalTwin section:nth-child(2) {
-  height: 1800px;
+  height: 350vh;
 }
 .digitalTwin section:nth-child(2) {
-  height: 1500px;
+  height: 150vh;
 }
 
 .digitalTwin .digitalTwin__header {

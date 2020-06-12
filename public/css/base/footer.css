@@ -1,8 +1,16 @@
 .footer {
   position: relative;
-  bottom: -13rem;
+  bottom: -3rem;
   left: -3rem;
   width: 100vw;
-  height: 10rem;
-  background-color: yellow;
+  padding: 1rem 0;
+  background-color: #ddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__column img {
+  width: 3rem;
+  height: 3rem;
 }

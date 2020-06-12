@@ -11,12 +11,12 @@ let last_known_scroll_position = 0;
 let ticking = false;
 
 const secondSection = (scroll_pos) => {
-  if (scroll_pos >= 0 && scroll_pos < 1800) {
+  if (scroll_pos >= 0 && scroll_pos < 1600) {
     DT[1].classList.add('virtual--opacity');
     DT[1].classList.remove('virtual');
     DT[0].classList.add('reality');
     DT[0].classList.remove('reality--opacity');
-  } else if (scroll_pos >= 1800 && scroll_pos < 2300) {
+  } else if (scroll_pos >= 1600 && scroll_pos < 2100) {
     DT[0].classList.add('reality--opacity');
     DT[0].classList.remove('reality');
     DT[1].classList.add('virtual');
