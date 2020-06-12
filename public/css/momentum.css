@@ -95,9 +95,6 @@
   border-radius: 50%;
   margin-top: 3rem;
 }
-.momentum .mobile-userImg:focus {
-  outline: none;
-}
 
 .momentum__mobile-wrapper {
   margin: 1rem 0;
@@ -120,7 +117,6 @@
   text-align: center;
   caret-color: #364fc7;
   background-color: rgba(0, 0, 0, 0);
-  font-family: 'Do Hyeon', sans-serif;
   color: #fff;
 }
 
@@ -220,7 +216,6 @@
   text-align: center;
   caret-color: #364fc7;
   background-color: rgba(0, 0, 0, 0);
-  font-family: 'Do Hyeon', sans-serif;
   color: #fff;
 }
 
@@ -266,12 +261,10 @@
   text-align: center;
   caret-color: #364fc7;
   background-color: rgba(0, 0, 0, 0);
-  font-family: 'Do Hyeon', sans-serif;
   color: #fff;
 }
 
 .todos__form input:focus {
-  outline: none;
   animation: focusInput 1s linear infinite;
 }
 
@@ -416,7 +409,6 @@
 
 .todoList__column .todoList-del {
   border: none;
-  outline: none;
   background-color: rgba(0, 0, 0, 0);
   font-size: 1.5rem;
   color: #ff6b6b;

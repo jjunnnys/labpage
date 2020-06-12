@@ -26,6 +26,9 @@ body::-webkit-scrollbar-thumb {
   box-sizing: border-box;
   outline: none;
 }
+*:focus {
+  outline: none;
+}
 
 @keyframes upMain {
   0% {
