@@ -3,29 +3,24 @@ const bgWrapper = document.querySelector('.bg-wrapper');
 const bgWrapperText = document.querySelector('.bg-wrapper__text');
 const dtHeader = document.querySelector('.digitalTwin__header');
 const dtImg = document.querySelector('.digitalTwin__img');
-const DT = document.querySelectorAll('.dt-img__column');
+const reality = document.querySelector('.reality');
+const virtual = document.querySelector('.virtual');
 
-console.log(rotateImg.childNodes[1]);
+console.log(reality, virtual);
 
 let last_known_scroll_position = 0;
 let ticking = false;
 
 const secondSection = (scroll_pos) => {
-  if (scroll_pos >= 0 && scroll_pos < 1600) {
-    DT[1].classList.add('virtual--opacity');
-    DT[1].classList.remove('virtual');
-    DT[0].classList.add('reality');
-    DT[0].classList.remove('reality--opacity');
-  } else if (scroll_pos >= 1600 && scroll_pos < 2100) {
-    DT[0].classList.add('reality--opacity');
-    DT[0].classList.remove('reality');
-    DT[1].classList.add('virtual');
-    DT[1].classList.remove('virtual--opacity');
+  if (scroll_pos >= 0 && scroll_pos < 1400) {
+    reality.classList.remove('reality--opacity');
+    virtual.classList.add('virtual--opacity');
+  } else if (scroll_pos >= 1400 && scroll_pos < 2000) {
+    reality.classList.add('reality--opacity');
+    virtual.classList.remove('virtual--opacity');
   } else {
-    DT[0].classList.add('reality--opacity');
-    DT[0].classList.remove('reality');
-    DT[1].classList.add('virtual--opacity');
-    DT[1].classList.remove('virtual');
+    reality.classList.add('reality--opacity');
+    virtual.classList.add('virtual--opacity');
   }
 };
 

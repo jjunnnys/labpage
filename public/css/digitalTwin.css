@@ -38,7 +38,7 @@
   scroll-behavior: smooth;
 }
 .digitalTwin section:nth-child(1) {
-  height: 150vh;
+  height: 100vh;
 }
 .digitalTwin section:nth-child(2) {
   height: 350vh;
@@ -64,7 +64,7 @@
   font-size: 5rem;
   text-transform: uppercase;
   color: #fff;
-  transition: opacity 0.3s, transform 0.8s;
+  transition: opacity 0.2s linear, transform 0.5s linear;
 }
 
 .digitalTwin .dt-header__sub-title {
@@ -106,14 +106,11 @@
 
 .dt-img__column .reality {
   position: relative;
-  transform: scale(1);
-  transition: transform 0.3s;
+  transition: transform 0.5s;
 }
 
 .reality--opacity {
-  position: relative;
   transform: scale(0);
-  transition: transform 0.3s;
 }
 
 .dt-img__column img {
@@ -182,14 +179,11 @@
 
 .dt-img__column .virtual {
   position: relative;
-  transform: scale(1);
-  transition: transform 0.3s;
+  transition: transform 0.5s;
 }
 
 .virtual--opacity {
-  position: relative;
   transform: scale(0);
-  transition: transform 0.3s;
 }
 
 .dt-img__column img {
