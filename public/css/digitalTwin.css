@@ -262,7 +262,7 @@
 .dt-icon__column:nth-child(1) p {
   font-family: 'Black Han Sans', sans-serif;
   font-size: 3rem;
-  margin-top: 3rem;
+  padding-top: 10rem;
   color: #f1f3f5;
 }
 

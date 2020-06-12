@@ -89,7 +89,7 @@ main {
   transform: translate(0.68vw, 0) skew(-13deg) scale(1, 1.2);
   z-index: 2;
   text-shadow: 0 0 5px rgba(0, 0, 0, 1), 2px -1px 6px rgba(0, 0, 0, 0.2);
-  transition: top 3s, transform 3s;
+  transition: top 1s, transform 1s;
 }
 .bgTextOut::before {
   content: attr(data-heading);
@@ -104,7 +104,7 @@ main {
   transform: none;
   z-index: 2;
   text-shadow: 2px -1px 6px rgba(0, 0, 0, 0.2);
-  transition: top 3s, transform 3s;
+  transition: top 1s, transform 1s;
 }
 
 .bg-wrapper .bg-wrapper__text::after {
@@ -134,12 +134,12 @@ main {
   color: #868e96;
   clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
   text-shadow: 2px -1px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s;
+  transition: transform 1s;
 }
 
 .animationOut {
   opacity: 0;
-  transition: opacity 0.3s ease-in;
+  transition: opacity 1s ease-in;
 }
 .animationIn {
   opacity: 0.3;
