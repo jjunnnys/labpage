@@ -33,7 +33,7 @@ const firstSection = (scroll_pos) => {
 };
 
 const bgImg = (scroll_pos) => {
-  if (scroll_pos > 2000) {
+  if (scroll_pos > 2300) {
     rotateImg.style = `opacity:0; transform: rotate(${scroll_pos}deg)`;
   } else {
     rotateImg.style = `opacity:1; transform: rotate(${scroll_pos}deg)`;

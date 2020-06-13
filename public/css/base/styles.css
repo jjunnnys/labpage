@@ -156,6 +156,15 @@ main {
   transition: opacity 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 1024px) {
+  .footer .footer__column:nth-child(1) {
+    font-size: 1rem;
+  }
+  .footer .footer__column:nth-child(3) {
+    font-size: 0.8rem;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .bg-wrapper {
     top: 80%;
