@@ -142,7 +142,7 @@ main {
   transition: opacity 1s ease-in;
 }
 .animationIn {
-  opacity: 0.3;
+  opacity: 0.5;
   transition: opacity 1s ease-in-out;
 }
 

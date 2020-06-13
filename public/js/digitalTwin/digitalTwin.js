@@ -10,10 +10,11 @@ let last_known_scroll_position = 0;
 let ticking = false;
 
 const secondSection = (scroll_pos) => {
-  if (scroll_pos >= 0 && scroll_pos < 1400) {
+  console.log(scroll_pos);
+  if (scroll_pos >= 1200 && scroll_pos < 1700) {
     reality.classList.remove('reality--opacity');
     virtual.classList.add('virtual--opacity');
-  } else if (scroll_pos >= 1400 && scroll_pos < 2000) {
+  } else if (scroll_pos >= 1700 && scroll_pos < 2300) {
     reality.classList.add('reality--opacity');
     virtual.classList.remove('virtual--opacity');
   } else {
