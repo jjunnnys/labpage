@@ -157,6 +157,9 @@ main {
 }
 
 @media screen and (max-width: 375px) {
+  .bg-wrapper {
+    top: 80%;
+  }
   .bg-wrapper .bg-wrapper__text {
     font-size: 20vw;
   }
@@ -167,5 +170,23 @@ main {
   .bg-wrapper .bg-wrapper__text::before {
     top: -5%;
     transform: translate(1.25vw, 0) skew(-13deg) scale(1, 1.2);
+  }
+
+  .footer {
+    bottom: 0rem;
+    left: 0rem;
+    width: 100%;
+  }
+
+  .footer .footer__column:nth-child(1) {
+    font-size: 0.8rem;
+  }
+
+  .footer .footer__column:nth-child(2) {
+    display: none;
+  }
+
+  .footer .footer__column:nth-child(3) {
+    display: none;
   }
 }
