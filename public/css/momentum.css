@@ -1,6 +1,7 @@
 @import './base/styles.css';
 
 body {
+  width: 100%;
   height: 100vh;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */

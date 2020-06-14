@@ -1,2 +1,19 @@
 {% set title = "gallery | Digital Twin" %} {% extends "./layout/base.html" %} {%
-block script %} {% endblock %} {% block contents%} {% endblock %}
+block css %}
+<link rel="stylesheet" href="css/gallery.css" />
+{% endblock %} {% block script %}
+<script defer src="js/research/gallery.js"></script>
+{% endblock %} {% block contents%} {% from "macro/link.html" import bgWrapper %}
+{{ bgWrapper("gallery") }}
+<main class="gallery">
+  <div class="gallery__header">
+    <h1 class="gallery__title">lab gallery</h1>
+    <h2 class="gallery__sub-title">...</h2>
+  </div>
+  <section class="gallery__main">
+    <div class="gallery__column"></div>
+    <div class="gallery__column"></div>
+    <div class="gallery__column"></div>
+  </section>
+</main>
+{% include "layout/footer.html" %} {% endblock %}
