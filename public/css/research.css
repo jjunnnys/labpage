@@ -40,8 +40,54 @@
   align-items: center;
 }
 
+.research__column h3 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+.research__column h4 {
+  color: #ced4da;
+  font-size: 1rem;
+}
+
+.research__column .research__img {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+}
+
 .research__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 20rem;
   border-radius: 1rem;
   box-shadow: 0 0 60px rgba(77, 171, 247, 0.25);
+}
+
+.rImg .rImg__cover {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 19rem;
+  height: 19rem;
+  border-radius: 2rem;
+  background-color: rgba(77, 171, 247, 0.8);
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.5s;
+}
+
+.rImg__cover:hover {
+  opacity: 1;
+}
+
+.rImg__cover i {
+  font-size: 5rem;
+  color: #fff;
 }
