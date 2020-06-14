@@ -2,7 +2,7 @@
 block css %}
 <link rel="stylesheet" href="css/gallery.css" />
 {% endblock %} {% block script %}
-<script defer src="js/research/gallery.js"></script>
+<script defer src="js/gallery/gallery.js"></script>
 {% endblock %} {% block contents%} {% from "macro/link.html" import bgWrapper %}
 {{ bgWrapper("gallery") }}
 <main class="gallery">
@@ -11,7 +11,20 @@ block css %}
     <h2 class="gallery__sub-title">...</h2>
   </div>
   <section class="gallery__main">
-    <div class="gallery__column"></div>
+    <div class="gallery__column gImg">
+      <div class="gImg__item">
+        <img src="img/gallery/1.jpg" alt="lab1" />
+      </div>
+      <div class="gImg__item">
+        <img src="./img/gallery/2.jpg" alt="lab2" />
+      </div>
+      <div class="gImg__item">
+        <img src="./img/gallery/3.jpg" alt="lab3" />
+      </div>
+      <div class="gImg__item">
+        <img src="./img/gallery/4.jpg" alt="lab4" />
+      </div>
+    </div>
     <div class="gallery__column"></div>
     <div class="gallery__column"></div>
   </section>
