@@ -467,37 +467,56 @@
   }
 }
 
-@media screen and (max-width: 375px) {
-  .rotateImg {
-    top: 60%;
-  }
-  .rotateImg img {
-    width: 15%;
-    height: auto;
-  }
-
+@media screen and (max-width: 414px) {
   .digitalTwin .dt-header__title {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
   .digitalTwin .dt-header__sub-title {
     top: 30%;
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .reality .reality__contents {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .virtual .virtual__contents {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .dt-img__column img {
+    width: 25rem;
+    height: auto;
+  }
+
+  .dt-icon__column:nth-child(1) p {
+    font-size: 2.25rem;
+  }
+
+  .digitalTwin__icon .dt-icon__slider img {
+    width: 3.5rem;
+    height: auto;
+    margin: 1rem;
+  }
+
+  .dt-icon__slider span {
     font-size: 1.5rem;
-    line-height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .digitalTwin .dt-header__title {
+    font-size: 2.25rem;
   }
 
-  .digitalTwin__img:nth-child(1),
-  .digitalTwin__img:nth-child(2) {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .dt-img .dt-img__column:nth-child(1),
-  .dt-img .dt-img__column:nth-child(2) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .digitalTwin .dt-header__sub-title {
+    top: 30%;
+    font-size: 1.25rem;
+    line-height: 2rem;
   }
 
   .reality .reality__contents {
@@ -515,35 +534,8 @@
     height: auto;
   }
 
-  .digitalTwin__icon {
-    padding: 0;
-  }
-
-  .dt-icon__column:nth-child(1) {
-    margin: 0;
-    padding: 0.5rem 0;
-  }
-
   .dt-icon__column:nth-child(1) p {
     font-size: 2rem;
-  }
-
-  .dt-icon__column:nth-child(2) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 0 1rem;
-  }
-
-  .dt-icon__column:nth-child(3) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 0 1rem;
   }
 
   .digitalTwin__icon .dt-icon__slider img {
@@ -558,6 +550,16 @@
 }
 
 @media screen and (max-width: 320px) {
+  .digitalTwin .dt-header__title {
+    font-size: 1.8rem;
+  }
+
+  .digitalTwin .dt-header__sub-title {
+    top: 30%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .reality .reality__contents {
     font-size: 0.8rem;
     padding: 0.5rem;

@@ -206,11 +206,13 @@ main {
   }
 }
 
-@media screen and (max-width: 375px) {
-  .bg-wrapper {
-    top: 80%;
+@media screen and (max-width: 414px) {
+  .footer .footer__column:nth-child(1) {
+    font-size: 1rem;
   }
+}
 
+@media screen and (max-width: 375px) {
   .footer .footer__column:nth-child(1) {
     font-size: 0.8rem;
   }
