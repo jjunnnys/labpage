@@ -10,7 +10,6 @@ let last_known_scroll_position = 0;
 let ticking = false;
 
 const secondSection = (scroll_pos) => {
-  console.log(scroll_pos);
   if (scroll_pos >= 1200 && scroll_pos < 1700) {
     reality.classList.remove('reality--opacity');
     virtual.classList.add('virtual--opacity');
