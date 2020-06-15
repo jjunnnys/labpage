@@ -5,9 +5,20 @@ const dtHeader = document.querySelector('.digitalTwin__header');
 const dtImg = document.querySelector('.digitalTwin__img');
 const reality = document.querySelector('.reality');
 const virtual = document.querySelector('.virtual');
+const dtIcon = document.querySelector('.dt-icon');
+console.log(dtIcon);
 
 let last_known_scroll_position = 0;
 let ticking = false;
+
+const thirdSection = (scroll_pos) => {
+  console.log(scroll_pos);
+  if (scroll_pos > 2300) {
+    dtIcon.style = `opacity:1`;
+  } else {
+    dtIcon.style = `opacity:0`;
+  }
+};
 
 const secondSection = (scroll_pos) => {
   if (scroll_pos >= 1200 && scroll_pos < 1700) {
@@ -61,6 +72,7 @@ window.addEventListener('scroll', () => {
       bgImg(last_known_scroll_position);
       firstSection(last_known_scroll_position);
       secondSection(last_known_scroll_position);
+      thirdSection(last_known_scroll_position);
       ticking = false;
     });
     ticking = true;

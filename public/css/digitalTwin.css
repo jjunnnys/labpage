@@ -42,10 +42,11 @@
   height: 1300px;
 }
 .digitalTwin section:nth-child(2) {
-  height: 3000px;
-}
-.digitalTwin section:nth-child(2) {
   height: 1500px;
+}
+.digitalTwin section:nth-child(3) {
+  height: 850px;
+  transition: opacity 2s;
 }
 
 .digitalTwin .digitalTwin__header {
