@@ -6,10 +6,10 @@ block css %}
 {% endblock %} {% block contents%} {% from "macro/link.html" import bgWrapper %}
 {{ bgWrapper("member") }}
 <main class="member">
-  <div class="member__header">
+  <header class="member__header">
     <h1 class="member__title">member</h1>
     <h2 class="member__sub-title">Digital Twin Laboratory</h2>
-  </div>
+  </header>
   <section class="member__main">
     <div class="member__row">
       <div class="member__column">
@@ -60,6 +60,68 @@ block css %}
         <dl class="member__infoR">
           <dt>Min-Jun Seo</dt>
           <dd>student</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+<main class="alumni">
+  <header class="alumni__header">
+    <h1 class="alumni__title">alumni</h1>
+    <h2 class="alumni__sub-title">Laboratory History</h2>
+  </header>
+  <section class="alumni__main">
+    <div class="alumni__row">
+      <div class="alumni__column js-slideL">
+        <dl class="alumni__itmes">
+          <dt>
+            2016-17 <br />
+            Kyeong-su Seol
+          </dt>
+          <dl>(현)신화모텍 개발팀 근무</dl>
+        </dl>
+        <dl class="alumni__itmes">
+          <dt>
+            <em>대표적인 연구성과</em>
+          </dt>
+          <dl>
+            "Fatigue Test of 3D-printed ABS Parts <br />
+            Fabricated by Fused Deposition Modeling"
+          </dl>
+        </dl>
+      </div>
+      <div class="alumni__column">
+        <img
+          class="js-alumni-Seol"
+          src="img/team/about/1.jpg"
+          alt="Kyeong-su Seol"
+        />
+      </div>
+    </div>
+    <div class="alumni__row">
+      <div class="alumni__column">
+        <img
+          class="js-alumni-Zhao"
+          src="img/team/about/2.jpg"
+          alt="Panxi Zhao"
+        />
+      </div>
+      <div class="alumni__column js-slideR">
+        <dl class="alumni__itmes">
+          <dt>
+            2017-18 <br />
+            Panxi Zhao
+          </dt>
+          <dl>...</dl>
+        </dl>
+        <dl class="alumni__itmes">
+          <dt>
+            대표적인 연구성과
+          </dt>
+          <dl>
+            "Infill Print Parameters for Mechanical Properties <br />
+            of 3D Printed PLA Parts"
+          </dl>
         </dl>
       </div>
     </div>
