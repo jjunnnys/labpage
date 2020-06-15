@@ -1,2 +1,68 @@
 {% set title = "member | Digital Twin" %} {% extends "./layout/base.html" %} {%
-block script %} {% endblock %} {% block contents%} {% endblock %}
+block css %}
+<link rel="stylesheet" href="css/member.css" />
+{% endblock %} {% block script %}
+<script defer src="js/member/member.js"></script>
+{% endblock %} {% block contents%} {% from "macro/link.html" import bgWrapper %}
+{{ bgWrapper("member") }}
+<main class="member">
+  <div class="member__header">
+    <h1 class="member__title">member</h1>
+    <h2 class="member__sub-title">Digital Twin Laboratory</h2>
+  </div>
+  <section class="member__main">
+    <div class="member__row">
+      <div class="member__column">
+        <dl class="member__info">
+          <dt>Sung-Uk Zhang</dt>
+          <dd>Professor</dd>
+        </dl>
+        <div class="member__img js-mImg">
+          <img src="img/team/1.jpeg" alt="Sung-Uk Zhang" />
+          <a class="email" href="mailto: zsunguk@deu.ac.kr">
+            zsunguk@deu.ac.kr
+          </a>
+        </div>
+      </div>
+      <div class="member__column">
+        <dl class="member__info">
+          <dt>Hyun-Joo Yoo</dt>
+          <dd>Researcher</dd>
+        </dl>
+        <div class="member__img js-mImg">
+          <img src="img/team/2.jpeg" alt="Hyun-Joo Yoo" />
+          <a class="email" href="mailto: comjoo@deu.ac.kr">
+            comjoo@deu.ac.kr
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="member__row">
+      <div class="member__column">
+        <div class="member__img js-mImg">
+          <img src="img/team/3.png" alt="Na-yeon Choi" />
+          <a class="email" href="mailto: miss_jackson@naver.com">
+            miss_jackson<br />@naver.com
+          </a>
+        </div>
+        <dl class="member__infoR">
+          <dt>Na-Yeon Choi</dt>
+          <dd>Postgraduate Student</dd>
+        </dl>
+      </div>
+      <div class="member__column">
+        <div class="member__img js-mImg">
+          <img src="img/team/4.jpg" alt="salswnss@gmail.com" />
+          <a class="email" href="mailto: salswnss@gmail.com">
+            salswnss@gmail.com
+          </a>
+        </div>
+        <dl class="member__infoR">
+          <dt>Min-Jun Seo</dt>
+          <dd>student</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+{% include "layout/footer.html" %} {% endblock %}

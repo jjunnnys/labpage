@@ -1,0 +1,166 @@
+@import './base/styles.css';
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 120vh;
+}
+
+.member .member__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.member__header .member__title {
+  text-transform: uppercase;
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.member__header .member__sub-title {
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 2.5rem;
+  color: #ced4da;
+}
+
+.member__main {
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.member__main .member__row {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.member__column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.member__img {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+}
+
+.member__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  box-shadow: 0 0 60px rgba(77, 171, 247, 0.2),
+    -2px 10px 30px rgba(0, 0, 0, 0.25), 2px -10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s, border-radius 0.5s, filter 0.5s;
+  background-color: #b4c6ca;
+}
+
+.member__img:hover img {
+  filter: blur(10px);
+  border-radius: 40%;
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+.member__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 18rem;
+  height: 13rem;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateX(17rem);
+  z-index: -1;
+  transition: transform 0.5s;
+}
+
+.member__info-show {
+  transform: translateX(0.5rem);
+}
+
+.member__info dt {
+  color: #fff;
+  font-family: 'Sunflower', sans-serif;
+  font-size: 2rem;
+}
+
+.member__info dd {
+  margin-top: 1rem;
+  color: #ced4da;
+  font-size: 1rem;
+}
+
+.member__infoR {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 18rem;
+  height: 13rem;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateX(-17rem);
+  z-index: -1;
+  transition: transform 0.5s;
+}
+
+.member__info-showR {
+  transform: translateX(-0.5rem);
+}
+
+.member__imgR:hover img {
+  filter: blur(10px);
+  border-radius: 40%;
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+.member__infoR dt {
+  color: #fff;
+  font-family: 'Sunflower', sans-serif;
+  font-size: 2rem;
+}
+
+.member__infoR dd {
+  margin-top: 1rem;
+  color: #ced4da;
+  font-size: 1rem;
+}
+
+.email {
+  position: absolute;
+  top: 40%;
+  left: 1rem;
+  width: 100%;
+  font-family: 'Sunflower', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  z-index: 1;
+  opacity: 0;
+  text-shadow: 1px 0 30px #212529, -1px 0 30px #212529; /* 동의대 컬러 */
+  transition: opacity 0.3s;
+}
+
+.email-show {
+  opacity: 1;
+}
