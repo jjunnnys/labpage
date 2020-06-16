@@ -42,9 +42,10 @@
 }
 
 .research__column h3 {
+  font-family: 'Do Hyeon', sans-serif;
   color: #fff;
   font-size: 2.5rem;
-  margin: 0.5rem 0;
+  margin-top: 1rem;
 }
 
 .research__column h4 {
@@ -64,7 +65,8 @@
   left: 0;
   width: 20rem;
   border-radius: 1rem;
-  box-shadow: 0 0 60px rgba(77, 171, 247, 0.25);
+  box-shadow: 2px 2px 30px rgba(77, 171, 247, 0.25),
+    -2px -2px 30px rgba(81, 207, 102, 0.25);
 }
 
 .rImg .rImg__cover {
@@ -91,4 +93,160 @@
 .rImg__cover i {
   font-size: 5rem;
   color: #fff;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50rem);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+.show-modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal__btn {
+  position: sticky;
+  top: 8%;
+  left: 96%;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 5rem;
+  cursor: pointer;
+}
+
+.leftright {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.25rem;
+  width: 2rem;
+  background-color: #f4a259;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in;
+}
+
+.rightleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.25rem;
+  width: 2rem;
+  background-color: #f4a259;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  transition: all 0.3s ease-in;
+}
+
+.modal__btn:hover .leftright {
+  transform: rotate(-45deg);
+  background-color: #f25c66;
+}
+
+.modal__btn:hover .rightleft {
+  transform: rotate(45deg);
+  background-color: #f25c66;
+}
+
+.modal__contents {
+  position: relative;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  width: 90%;
+  margin: 0 auto;
+  height: 85%;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: #f1f3f5;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal__contents .modal__contents-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mHeader .mHeader__title {
+  font-family: 'Black Han Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 5rem;
+  padding: 2rem;
+}
+
+.mHeader .mHeader__sub-title {
+  font-family: 'Do Hyeon', sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+
+.modal .modal__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__wrapper ol {
+  font-family: 'Sunflower', sans-serif;
+
+  list-style: decimal-leading-zero;
+  font-size: 1.4rem;
+  padding: 0 5rem;
+}
+
+.journal__items .itmes__item {
+  margin-bottom: 3rem;
+  padding: 1rem;
+}
+
+.journal__items .itmes__item:nth-child(2n + 1) {
+  background-color: #e9ecef;
+  border-radius: 1rem;
+}
+
+.itmes__item-contents dt strong {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #212529;
+}
+
+.itmes__item-contents dd {
+  padding: 5rem 0;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.itmes__item-etc dt {
+  font-size: 1.2rem;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.itmes__item-etc dt span {
+  font-size: 1.3rem;
+  text-decoration: wavy underline;
+  text-decoration-color: #0257a7;
+  line-height: 1rem;
+}
+
+.itmes__item-etc dd {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.itmes__item-etc dd:hover {
+  color: #e7305b;
 }

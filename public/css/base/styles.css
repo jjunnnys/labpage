@@ -28,6 +28,10 @@ body::-webkit-scrollbar-thumb {
   box-sizing: border-box;
 }
 
+button {
+  border: none;
+}
+
 button:focus,
 input:focus {
   outline: none;
