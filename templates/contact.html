@@ -1,2 +1,91 @@
 {% set title = "contact | Digital Twin" %} {% extends "./layout/base.html" %} {%
-block script %} {% endblock %} {% block contents%} {% endblock %}
+block css %}
+<link rel="stylesheet" href="css/contact.css" />
+{% endblock %} {% block script %}
+<script defer src="js/contact/contact.js"></script>
+{% endblock %} {% block contents%} {% from "macro/link.html" import bgWrapper %}
+{{ bgWrapper("contact") }}
+
+<main class="contact">
+  <header class="contact__header">
+    <h1 class="contact__title">contact</h1>
+    <h2 class="contact__sub-title">문의하기</h2>
+  </header>
+  <section class="contact__main">
+    <div class="contact__wrapper">
+      <div class="contact__screen screen">
+        <div class="screen__header">
+          <div class="screen__header-left">
+            <span class="screen__header-icon close"></span>
+            <span class="screen__header-icon maximize"></span>
+            <span class="screen__header-icon minimize"></span>
+          </div>
+          <div class="screen__header-right">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+        </div>
+        <div class="screen__body">
+          <div class="screen__body-item left">
+            <div class="left__title">
+              <h1>
+                CONTACT
+                <br />
+                US
+              </h1>
+            </div>
+            <div class="left__contents">스팸검사 후 메세지가 보내짐</div>
+          </div>
+          <div class="screen__body-item item">
+            <form
+              novalidate
+              action="https://formspree.io/xzbgkrbe"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="Digital Twin Laboratory에 이메일이 도착했습니다."
+              />
+              <input type="text" name="_gotcha" style="display: none;" />
+
+              <div class="item__form">
+                <label class="item__form-group">
+                  <input
+                    type="text"
+                    class="item__form-control"
+                    placeholder="NAME *"
+                    minlength="2"
+                    required
+                  />
+                </label>
+                <label class="item__form-group">
+                  <input
+                    type="email"
+                    class="item__form-control"
+                    placeholder="EMAIL *"
+                    required
+                  />
+                </label>
+                <label class="item__form-group message">
+                  <input
+                    type="text"
+                    class="item__form-control"
+                    placeholder="MESSAGE *"
+                    required
+                  />
+                </label>
+                <div class="item__form-group btn">
+                  <button type="submit" class="item__form-button">
+                    SEND
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "layout/footer.html" %} {% endblock %}

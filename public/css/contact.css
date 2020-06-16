@@ -1,0 +1,238 @@
+@import './base/styles.css';
+
+/* *,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
+  font-size: 12px;
+}
+
+body,
+button,
+input {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+} */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact .contact__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__header .contact__title {
+  text-transform: uppercase;
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.contact__header .contact__sub-title {
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 2.5rem;
+  color: #ced4da;
+}
+
+.contact__main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__wrapper {
+  width: 70rem;
+  padding: 5rem;
+}
+
+.contact__screen {
+  position: relative;
+  background: #f8f9fa;
+  border-radius: 1.5rem;
+}
+
+/* .contact__screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  z-index: -1;
+} */
+
+.screen__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #4d4d4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.screen__header-icon {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: white;
+}
+
+.screen__header-icon.close {
+  background: #f36a4c;
+}
+
+.screen__header-icon.maximize {
+  background: #ffbf2c;
+}
+
+.screen__header-icon.minimize {
+  background: #46be5f;
+}
+
+.screen__header-right {
+  display: flex;
+  color: #ddd;
+  font-size: 1.25rem;
+}
+
+.screen__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.screen__body-item {
+  display: flex;
+  padding: 3rem;
+}
+
+.screen__body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.left .left__title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #1864ab;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 3rem;
+}
+
+.left__title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 2rem;
+  height: 0.25rem;
+  background: #1864ab;
+}
+
+.left__contents {
+  margin-top: auto;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.item__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.item__form-group {
+  margin-bottom: 3rem;
+}
+
+.item__form-group.btn {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.item__form-control {
+  width: 20rem;
+  padding: 1rem 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: black;
+  font-size: 1rem;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.item__form-control::placeholder {
+  color: #666;
+}
+
+.item__form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.item__form-button {
+  background: none;
+  border: none;
+  color: #228be6;
+  font-family: 'Sunflower', sans-serif;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.item__form-button:hover {
+  color: #1864ab;
+}
+
+@media screen and (max-width: 520px) {
+  .screen-body {
+    flex-direction: column;
+  }
+
+  .screen-body-item.left {
+    margin-bottom: 30px;
+  }
+
+  .app-title {
+    flex-direction: row;
+  }
+
+  .app-title span {
+    margin-right: 12px;
+  }
+
+  .app-title:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .screen-body {
+    padding: 40px;
+  }
+
+  .screen-body-item {
+    padding: 0;
+  }
+}
