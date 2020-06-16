@@ -86,3 +86,35 @@
     transform: scale(1.1);
   }
 }
+
+@media screen and (max-width: 414px) {
+  .gallery__header .gallery__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .gallery__header .gallery__sub-title {
+    font-size: 2rem;
+  }
+
+  .gallery__column .gImg__item img {
+    width: 18rem;
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .gallery__header .gallery__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .gallery__header .gallery__sub-title {
+    font-size: 1.5rem;
+  }
+
+  .gallery__column .gImg__item img {
+    width: 15rem;
+    margin: 1rem 0;
+  }
+}

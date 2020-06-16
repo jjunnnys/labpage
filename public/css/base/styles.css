@@ -177,6 +177,10 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
   .bg-wrapper {
     top: 70%;
   }
