@@ -55,10 +55,34 @@
   .gallery__main {
     padding: 3rem 0;
   }
+
   .gallery__column .gImg__item img {
     width: 18rem;
   }
+
   .gImg__item img:hover {
     transform: scale(1.2) translateY(15rem);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .gallery {
+    height: 100%;
+  }
+
+  .gallery__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .gallery__column .gImg__item img {
+    width: 23rem;
+    margin: 1rem 0;
+  }
+
+  .gImg__item img:hover {
+    transform: scale(1.1);
   }
 }
