@@ -97,7 +97,7 @@
 .rImg__cover i {
   font-size: 5rem;
   color: #fff;
-  transition: transform 0.3s;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .rImg__cover i:hover {
@@ -148,10 +148,9 @@
 .modal__btn {
   position: sticky;
   top: 8%;
-  left: 96%;
-  width: 2rem;
-  height: 2rem;
-  margin-top: 5rem;
+  left: 93%;
+  width: 3rem;
+  height: 3rem;
   cursor: pointer;
 }
 
@@ -159,10 +158,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 0.25rem;
-  width: 2rem;
+  height: 0.5rem;
+  width: 3rem;
   background-color: #f4a259;
-  border-radius: 2px;
+  border-radius: 1.5rem;
   transform: rotate(45deg);
   transition: all 0.3s ease-in;
 }
@@ -171,10 +170,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 0.25rem;
-  width: 2rem;
+  height: 0.5rem;
+  width: 3rem;
   background-color: #f4a259;
-  border-radius: 2px;
+  border-radius: 1.5rem;
   transform: rotate(-45deg);
   transition: all 0.3s ease-in;
 }
@@ -265,6 +264,7 @@
   font-size: 1.2rem;
   font-style: italic;
   text-transform: capitalize;
+  line-height: 2rem;
 }
 
 .itmes__item-etc dt span {
@@ -368,5 +368,19 @@
   font-size: 1.5rem;
   margin: 0.5rem 0 1.5rem 0;
   color: #495057;
-  line-height: 1.5;
+  line-height: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .research__main {
+    flex-direction: column;
+  }
+
+  .research__column {
+    margin: 2rem 0;
+  }
+
+  .research {
+    height: 100%;
+  }
 }

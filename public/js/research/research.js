@@ -7,35 +7,6 @@ const modalBtn = document.querySelectorAll('.js-modal-btn');
 let last_known_scroll_position = 0;
 let ticking = false;
 
-const modalObj = {
-  showModal0: () => {
-    modal[0].classList.remove('hidden-modal');
-    modal[0].classList.add('show-modal');
-  },
-  hiddenModal0: () => {
-    modal[0].classList.remove('show-modal');
-    modal[0].classList.add('hidden-modal');
-  },
-
-  showModal1: () => {
-    modal[1].classList.remove('hidden-modal');
-    modal[1].classList.add('show-modal');
-  },
-  hiddenModal1: () => {
-    modal[1].classList.remove('show-modal');
-    modal[1].classList.add('hidden-modal');
-  },
-
-  showModal2: () => {
-    modal[2].classList.remove('hidden-modal');
-    modal[2].classList.add('show-modal');
-  },
-  hiddenModal2: () => {
-    modal[2].classList.remove('show-modal');
-    modal[2].classList.add('hidden-modal');
-  },
-};
-
 const bgText = (scroll_pos) => {
   if (scroll_pos >= 1) {
     bgWrapper.classList.remove('animationOut');
@@ -50,18 +21,32 @@ const bgText = (scroll_pos) => {
   }
 };
 
-const Research = () => {
-  cover[0].addEventListener('click', modalObj.showModal0);
-  modalBtn[0].addEventListener('click', modalObj.hiddenModal0);
-
-  cover[1].addEventListener('click', modalObj.showModal1);
-  modalBtn[1].addEventListener('click', modalObj.hiddenModal1);
-
-  cover[2].addEventListener('click', modalObj.showModal2);
-  modalBtn[2].addEventListener('click', modalObj.hiddenModal2);
+cover[0].onclick = () => {
+  modal[0].classList.remove('hidden-modal');
+  modal[0].classList.add('show-modal');
+};
+modalBtn[0].onclick = () => {
+  modal[0].classList.remove('show-modal');
+  modal[0].classList.add('hidden-modal');
 };
 
-Research();
+cover[1].onclick = () => {
+  modal[1].classList.remove('hidden-modal');
+  modal[1].classList.add('show-modal');
+};
+modalBtn[1].onclick = () => {
+  modal[1].classList.remove('show-modal');
+  modal[1].classList.add('hidden-modal');
+};
+
+cover[2].onclick = () => {
+  modal[2].classList.remove('hidden-modal');
+  modal[2].classList.add('show-modal');
+};
+modalBtn[2].onclick = () => {
+  modal[2].classList.remove('show-modal');
+  modal[2].classList.add('hidden-modal');
+};
 
 window.addEventListener('scroll', () => {
   last_known_scroll_position = window.scrollY;
