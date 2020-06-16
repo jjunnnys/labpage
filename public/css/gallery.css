@@ -50,3 +50,15 @@
 .gImg__item img:hover {
   transform: scale(1.1);
 }
+
+@media screen and (max-width: 1366px) {
+  .gallery__main {
+    padding: 3rem 0;
+  }
+  .gallery__column .gImg__item img {
+    width: 18rem;
+  }
+  .gImg__item img:hover {
+    transform: scale(1.2) translateY(15rem);
+  }
+}
