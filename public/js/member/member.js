@@ -5,8 +5,6 @@ const mInfo = document.querySelectorAll('.member__info');
 const email = document.querySelectorAll('.email');
 const github = document.querySelector('.github');
 
-console.log(github);
-
 let last_known_scroll_position = 0;
 let ticking = false;
 
