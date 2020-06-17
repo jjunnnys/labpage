@@ -213,3 +213,18 @@
     padding: 2rem;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .contact__wrapper {
+    width: 20rem;
+    margin-top: 3rem;
+  }
+
+  .screen__body-item {
+    padding: 2rem;
+  }
+
+  .item__form-control {
+    width: 15rem;
+  }
+}
