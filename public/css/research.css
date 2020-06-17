@@ -131,28 +131,35 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  transform: translateY(-50rem);
-  opacity: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
 }
 
 .show-modal {
+  display: block;
   animation: showModal 0.5s forwards;
 }
 
 .hidden-modal {
+  display: none;
   animation: hiddenModal 0.5s forwards;
 }
 
 .modal__btn {
-  position: sticky;
-  top: 3rem;
-  right: 3rem;
+  position: fixed;
+  top: 10%;
+  left: 90%;
+  width: 4rem;
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  z-index: 1;
 }
 
 .modal__btn i {
@@ -177,16 +184,25 @@
   overflow: scroll;
   overflow-x: hidden;
   background-color: #f1f3f5;
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
+  border-radius: 2rem;
   box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.modal__contents::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.modal--project {
+  width: 60%;
 }
 
 .modal__contents .modal__contents-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: -1;
 }
 
 .mHeader .mHeader__title {
@@ -211,7 +227,6 @@
 
 .modal__wrapper ol {
   font-family: 'Sunflower', sans-serif;
-
   list-style: decimal-leading-zero;
   font-size: 1.4rem;
   padding: 0 5rem;
@@ -250,12 +265,12 @@
   font-size: 1.3rem;
   text-decoration: wavy underline;
   text-decoration-color: #0257a7;
-  line-height: 1rem;
 }
 
 .itmes__item-etc dd {
   display: flex;
   justify-content: flex-end;
+  text-align: right;
   font-size: 1rem;
   transition: color 0.2s;
 }
@@ -391,7 +406,8 @@
   }
 
   .modal__btn {
-    top: 3rem;
+    top: 7%;
+    left: 88%;
   }
 
   .modal__btn i {
@@ -404,39 +420,228 @@
     margin: 1rem 0;
   }
 
-  .modal__wrapper ol {
-    font-size: 1.4rem;
+  .modal__btn {
+    top: 10%;
+    left: 85%;
   }
+
+  .modal--project {
+    width: 90%;
+  }
+
+  .modal--project .modal__wrapper {
+    justify-content: flex-end;
+    margin-right: 3rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .research__column .research__img {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .research__img img {
+    width: 15rem;
+    border-radius: 1.5rem;
+  }
+
+  .rImg .rImg__cover {
+    top: 0rem;
+    left: 0rem;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1.5rem;
+  }
+
+  .mHeader .mHeader__title {
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+
+  .mHeader .mHeader__sub-title {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .modal__btn {
+    width: auto;
+    height: auto;
+    top: 13%;
+    left: 85%;
+  }
+
+  .modal__btn i {
+    font-size: 2rem;
+  }
+
+  .modal__wrapper ol {
+    font-size: 1rem;
+    padding: 0;
+  }
+
   .itmes__item-contents dt strong {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #212529;
+    font-size: 1.25rem;
   }
 
   .itmes__item-contents dd {
-    padding: 5rem 0;
-    font-size: 1.6rem;
-    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.5rem;
   }
 
   .itmes__item-etc dt {
-    font-size: 1.2rem;
-    font-style: italic;
-    text-transform: capitalize;
-    line-height: 2rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
   }
 
   .itmes__item-etc dt span {
-    font-size: 1.3rem;
-    text-decoration: wavy underline;
-    text-decoration-color: #0257a7;
-    line-height: 1rem;
+    font-size: 1rem;
   }
 
   .itmes__item-etc dd {
-    display: flex;
-    justify-content: flex-end;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+
+  .modal--project .modal__wrapper {
+    margin-right: 1rem;
+  }
+
+  .modal__timeline {
+    width: 17rem;
+    padding: 1rem;
+  }
+
+  .modal__timeline .timline__item:before {
+    left: -7.2rem;
+    font-size: 0.8rem;
+    width: 5rem;
+    line-height: 1rem;
+  }
+
+  .modal__timeline .timline__item:after {
+    top: 5px;
+    left: -1.6rem;
+    height: 0.8rem;
+    width: 0.8rem;
+    box-shadow: 0 0 0 4px #004ffc;
+  }
+
+  .timline__item dl dt {
+    font-size: 1.25rem;
+  }
+
+  .timline__item dl dd {
     font-size: 1rem;
-    transition: color 0.2s;
+    margin: 0.25rem 0 1rem 0;
+    line-height: 1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .research__header .research__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .research__header .research__sub-title {
+    font-size: 1.5rem;
+  }
+
+  .mHeader .mHeader__title {
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+
+  .mHeader .mHeader__sub-title {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .research__column h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .research__column h4 {
+    font-size: 1rem;
+  }
+
+  .modal__btn {
+    top: 14%;
+    left: 83%;
+  }
+
+  .mHeader .mHeader__title {
+    margin-top: 1rem;
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+
+  .mHeader .mHeader__sub-title {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .modal__wrapper ol {
+    font-size: 0.8rem;
+  }
+
+  .itmes__item-contents dt strong {
+    font-size: 1rem;
+  }
+
+  .itmes__item-contents dd {
+    padding: 1.5rem 0;
+    font-size: 1.25rem;
+  }
+
+  .itmes__item-etc dt {
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
+
+  .itmes__item-etc dt span {
+    font-size: 0.8rem;
+  }
+
+  .itmes__item-etc dd {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .modal--project .modal__wrapper {
+    margin-right: 0;
+  }
+
+  .modal__timeline {
+    width: 15rem;
+    padding: 1rem;
+  }
+
+  .modal__timeline .timline__item:before {
+    left: -7.2rem;
+    font-size: 0.5rem;
+    width: 5rem;
+    line-height: 1rem;
+  }
+
+  .modal__timeline .timline__item:after {
+    top: 5px;
+    left: -1.6rem;
+    height: 0.8rem;
+    width: 0.8rem;
+    box-shadow: 0 0 0 4px #004ffc;
+  }
+
+  .timline__item dl dt {
+    font-size: 1.05rem;
+  }
+
+  .timline__item dl dd {
+    font-size: 0.8rem;
+    margin: 0.25rem 0 1rem 0;
+    line-height: 1rem;
   }
 }
