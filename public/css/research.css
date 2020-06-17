@@ -30,7 +30,8 @@
 
 .research__main {
   width: 100%;
-  padding: 3rem 5rem;
+  margin-top: 3rem;
+  padding: 0 5vw;
   display: flex;
   justify-content: space-between;
 }
@@ -413,6 +414,15 @@
   .modal__btn i {
     font-size: 3rem;
   }
+
+  .modal--project {
+    width: 70%;
+  }
+
+  .modal--project .modal__wrapper {
+    justify-content: flex-end;
+    margin-right: 2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -430,7 +440,6 @@
   }
 
   .modal--project .modal__wrapper {
-    justify-content: flex-end;
     margin-right: 3rem;
   }
 }
