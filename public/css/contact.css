@@ -190,3 +190,26 @@
     padding: 5rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .contact__wrapper {
+    width: 50rem;
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contact__wrapper {
+    width: 25rem;
+    padding: 0.5rem;
+    margin-top: 3rem;
+  }
+
+  .screen__body-item.left {
+    display: none;
+  }
+
+  .screen__body-item {
+    padding: 2rem;
+  }
+}
