@@ -49,7 +49,7 @@ const bgText = (scroll_pos) => {
   }
 };
 
-const modalEvent = (valid) => {
+const modalEvent = () => {
   if ('ontouchstart' in document.documentElement === true) {
     cover[0].ontouchend = () => {
       madalObj.showModal0();
