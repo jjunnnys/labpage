@@ -100,8 +100,8 @@
   transition: transform 0.3s, color 0.3s;
 }
 
-.rImg__cover i:hover {
-  transform: scale(1.2);
+.rImg__cover i:active {
+  transform: scale(0.9);
   color: #69db7c;
 }
 
@@ -147,45 +147,23 @@
 
 .modal__btn {
   position: sticky;
-  top: 8%;
-  left: 93%;
-  width: 3rem;
-  height: 3rem;
+  top: 3rem;
+  right: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 
-.leftright {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 0.5rem;
-  width: 3rem;
-  background-color: #f4a259;
-  border-radius: 1.5rem;
-  transform: rotate(45deg);
-  transition: all 0.3s ease-in;
+.modal__btn i {
+  font-size: 4rem;
+  color: #f4a259;
+  transition: all 0.2s ease-in;
 }
 
-.rightleft {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 0.5rem;
-  width: 3rem;
-  background-color: #f4a259;
-  border-radius: 1.5rem;
-  transform: rotate(-45deg);
-  transition: all 0.3s ease-in;
-}
-
-.modal__btn:hover .leftright {
-  transform: rotate(-45deg);
-  background-color: #f25c66;
-}
-
-.modal__btn:hover .rightleft {
-  transform: rotate(45deg);
-  background-color: #f25c66;
+.modal__btn:active i {
+  transform: scale(0.8);
+  color: #e7305b;
 }
 
 .modal__contents {
@@ -208,6 +186,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: -1;
 }
 
 .mHeader .mHeader__title {
@@ -372,6 +351,33 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .research__column .research__img {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .research__img img {
+    width: 25rem;
+    border-radius: 1.5rem;
+  }
+
+  .rImg .rImg__cover {
+    top: 0rem;
+    left: 0rem;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 1.5rem;
+  }
+
+  .research__column h3 {
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+
+  .research__column h4 {
+    font-size: 1.5rem;
+  }
+
   .research__main {
     flex-direction: column;
   }
@@ -382,5 +388,55 @@
 
   .research {
     height: 100%;
+  }
+
+  .modal__btn {
+    top: 3rem;
+  }
+
+  .modal__btn i {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .research__column {
+    margin: 1rem 0;
+  }
+
+  .modal__wrapper ol {
+    font-size: 1.4rem;
+  }
+  .itmes__item-contents dt strong {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #212529;
+  }
+
+  .itmes__item-contents dd {
+    padding: 5rem 0;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .itmes__item-etc dt {
+    font-size: 1.2rem;
+    font-style: italic;
+    text-transform: capitalize;
+    line-height: 2rem;
+  }
+
+  .itmes__item-etc dt span {
+    font-size: 1.3rem;
+    text-decoration: wavy underline;
+    text-decoration-color: #0257a7;
+    line-height: 1rem;
+  }
+
+  .itmes__item-etc dd {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1rem;
+    transition: color 0.2s;
   }
 }
