@@ -6,13 +6,11 @@ const dtImg = document.querySelector('.digitalTwin__img');
 const reality = document.querySelector('.reality');
 const virtual = document.querySelector('.virtual');
 const dtIcon = document.querySelector('.dt-icon');
-console.log(dtIcon);
 
 let last_known_scroll_position = 0;
 let ticking = false;
 
 const thirdSection = (scroll_pos) => {
-  console.log(scroll_pos);
   if (scroll_pos > 2300) {
     dtIcon.style = `opacity:1`;
   } else {
@@ -43,11 +41,19 @@ const firstSection = (scroll_pos) => {
 };
 
 const bgImg = (scroll_pos) => {
+  // if ('ontouchstart' in document.documentElement === true) {
+  //   if (scroll_pos > 2300) {
+  //     rotateImg.style = `opacity:0;`;
+  //   } else {
+  //     rotateImg.style = `opacity:1;`;
+  //   }
+  // } else {
   if (scroll_pos > 2300) {
     rotateImg.style = `opacity:0; transform: rotate(${scroll_pos}deg)`;
   } else {
     rotateImg.style = `opacity:1; transform: rotate(${scroll_pos}deg)`;
   }
+  // }
 };
 
 const bgText = (scroll_pos) => {
