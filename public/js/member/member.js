@@ -47,51 +47,27 @@ const bgText = (scroll_pos) => {
 };
 
 const Member = () => {
-  if ('ontouchstart' in document.documentElement === true) {
-    mImg[0].addEventListener('mouseenter', imgHandle.showImg0);
-    mImg[0].addEventListener('mouseenter', imgHandle.showEmail0);
-    mImg[0].addEventListener('touchend', imgHandle.hiddenImg0);
-    mImg[0].addEventListener('touchend', imgHandle.hiddenEmail0);
+  mImg[0].addEventListener('mouseenter', imgHandle.showImg0);
+  mImg[0].addEventListener('mouseenter', imgHandle.showEmail0);
+  mImg[0].addEventListener('mouseleave', imgHandle.hiddenImg0);
+  mImg[0].addEventListener('mouseleave', imgHandle.hiddenEmail0);
 
-    mImg[1].addEventListener('mouseenter', imgHandle.showImg1);
-    mImg[1].addEventListener('mouseenter', imgHandle.showEmail1);
-    mImg[1].addEventListener('touchend', imgHandle.hiddenImg1);
-    mImg[1].addEventListener('touchend', imgHandle.hiddenEmail1);
+  mImg[1].addEventListener('mouseenter', imgHandle.showImg1);
+  mImg[1].addEventListener('mouseenter', imgHandle.showEmail1);
+  mImg[1].addEventListener('mouseleave', imgHandle.hiddenImg1);
+  mImg[1].addEventListener('mouseleave', imgHandle.hiddenEmail1);
 
-    mImg[2].addEventListener('mouseenter', imgHandle.showImg2);
-    mImg[2].addEventListener('mouseenter', imgHandle.showEmail2);
-    mImg[2].addEventListener('touchend', imgHandle.hiddenImg2);
-    mImg[2].addEventListener('touchend', imgHandle.hiddenEmail2);
+  mImg[2].addEventListener('mouseenter', imgHandle.showImg2);
+  mImg[2].addEventListener('mouseenter', imgHandle.showEmail2);
+  mImg[2].addEventListener('mouseleave', imgHandle.hiddenImg2);
+  mImg[2].addEventListener('mouseleave', imgHandle.hiddenEmail2);
 
-    mImg[3].addEventListener('mouseenter', imgHandle.showImg3);
-    mImg[3].addEventListener('mouseenter', imgHandle.showEmail3);
-    mImg[3].addEventListener('touchend', imgHandle.hiddenImg3);
-    mImg[3].addEventListener('touchend', imgHandle.hiddenEmail3);
-    mImg[3].addEventListener('mouseenter', imgHandle.showGithub);
-    mImg[3].addEventListener('touchend', imgHandle.hiddenGithub);
-  } else {
-    mImg[0].addEventListener('mouseenter', imgHandle.showImg0);
-    mImg[0].addEventListener('mouseenter', imgHandle.showEmail0);
-    mImg[0].addEventListener('mouseleave', imgHandle.hiddenImg0);
-    mImg[0].addEventListener('mouseleave', imgHandle.hiddenEmail0);
-
-    mImg[1].addEventListener('mouseenter', imgHandle.showImg1);
-    mImg[1].addEventListener('mouseenter', imgHandle.showEmail1);
-    mImg[1].addEventListener('mouseleave', imgHandle.hiddenImg1);
-    mImg[1].addEventListener('mouseleave', imgHandle.hiddenEmail1);
-
-    mImg[2].addEventListener('mouseenter', imgHandle.showImg2);
-    mImg[2].addEventListener('mouseenter', imgHandle.showEmail2);
-    mImg[2].addEventListener('mouseleave', imgHandle.hiddenImg2);
-    mImg[2].addEventListener('mouseleave', imgHandle.hiddenEmail2);
-
-    mImg[3].addEventListener('mouseenter', imgHandle.showImg3);
-    mImg[3].addEventListener('mouseenter', imgHandle.showEmail3);
-    mImg[3].addEventListener('mouseleave', imgHandle.hiddenImg3);
-    mImg[3].addEventListener('mouseleave', imgHandle.hiddenEmail3);
-    mImg[3].addEventListener('mouseenter', imgHandle.showGithub);
-    mImg[3].addEventListener('mouseleave', imgHandle.hiddenGithub);
-  }
+  mImg[3].addEventListener('mouseenter', imgHandle.showImg3);
+  mImg[3].addEventListener('mouseenter', imgHandle.showEmail3);
+  mImg[3].addEventListener('mouseleave', imgHandle.hiddenImg3);
+  mImg[3].addEventListener('mouseleave', imgHandle.hiddenEmail3);
+  mImg[3].addEventListener('mouseenter', imgHandle.showGithub);
+  mImg[3].addEventListener('mouseleave', imgHandle.hiddenGithub);
 };
 
 Member();

@@ -74,7 +74,7 @@
 .member__img:hover img {
   filter: blur(10px);
   border-radius: 40%;
-  transform: scale(1.25);
+  transform: scale(1.2);
   z-index: 0;
 }
 
@@ -112,6 +112,7 @@
 }
 
 .email {
+  display: none;
   position: absolute;
   width: 100%;
   top: 40%;
@@ -120,31 +121,36 @@
   font-family: 'Sunflower', sans-serif;
   font-size: 2.5rem;
   color: #fff;
-  z-index: 1;
+  z-index: -1;
   opacity: 0;
   text-shadow: 1px 0 30px #212529, -1px 0 30px #212529;
   transition: opacity 0.3s;
 }
 
 .email-show {
+  display: flex;
+  z-index: 1;
   opacity: 1;
 }
 
 .github {
+  display: none;
   position: absolute;
   width: 100%;
   top: 70%;
   display: flex;
   justify-content: center;
   font-size: 4rem;
-  color: #212529;
-  z-index: 1;
+  color: #fff;
+  z-index: -1;
   opacity: 0;
   text-shadow: 1px 0 30px #212529, -1px 0 30px #212529;
   transition: opacity 0.3s;
 }
 
 .github-show {
+  display: flex;
+  z-index: 1;
   opacity: 1;
 }
 
@@ -426,5 +432,9 @@
 
   .alumni__header .alumni__sub-title {
     font-size: 1.5rem;
+  }
+
+  .email {
+    font-size: 2rem;
   }
 }
