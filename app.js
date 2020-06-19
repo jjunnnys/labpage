@@ -2,8 +2,10 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 const bodyParser = require('body-parser');
 const compression = require('compression');
+const helmet = require('helmet');
 
 class App {
+  // 생성자
   constructor() {
     this.app = express();
 
@@ -29,8 +31,8 @@ class App {
     // this.errorHandler();
   }
 
+  // 미들웨어 셋팅
   setMiddleWare() {
-    // 미들웨어 셋팅
     /* 
       사용자의 post 데이터를 내부적으로 분석한 뒤 콜백을 호출하도록 약속되어 있음,
       req.body라는 프로퍼티를 만들어준다.
@@ -43,8 +45,14 @@ class App {
       파일의 크기를 줄여줌 
     */
     this.app.use(compression());
+
+    /*
+      보안 관련
+    */
+    this.app.use(helmet());
   }
 
+  // 템플릿 엔진
   setViewEngine() {
     nunjucks.configure('templates', {
       autoescape: true,
@@ -52,6 +60,7 @@ class App {
     });
   }
 
+  // 정적 파일
   setStatic() {
     /* 
       url를 통해 접근 가능해짐. 다른 파일은 접근 불가 
@@ -59,8 +68,8 @@ class App {
     this.app.use(express.static('public'));
   }
 
+  // 템플릿 변수
   setLocals() {
-    // 템플릿 변수
     this.app.use((req, res, next) => {
       this.app.locals.isLogin = true;
       this.app.locals.req_path = req.path;
@@ -68,6 +77,7 @@ class App {
     });
   }
 
+  // 라우팅
   getRouting() {
     this.app.use(require('./controllers'));
   }
