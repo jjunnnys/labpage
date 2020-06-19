@@ -146,7 +146,7 @@
 }
 
 .hidden-modal {
-  display: none;
+  display: block;
   animation: hiddenModal 0.5s forwards;
 }
 
