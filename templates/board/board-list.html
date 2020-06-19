@@ -1,0 +1,17 @@
+{% set title = "게시판 | Digital Twin" %} {% extends "layout/base.html" %} {%
+block css %}
+<link rel="stylesheet" href="css/board/board-list.css" />
+{% endblock %} {% block script %} {% endblock %} {% block contents%}
+<main class="board">
+  <header class="board__header">
+    <h1 class="board__title">#All</h1>
+    <ul class="board__title-list title-list">
+      <li class="title-list__item">All</li>
+      <li class="title-list__item">gallery</li>
+      <li class="title-list__item">paper</li>
+      <li class="title-list__item">news</li>
+    </ul>
+  </header>
+</main>
+
+{% endblock %}
