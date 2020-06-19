@@ -7,27 +7,6 @@
   height: 100vh;
 }
 
-.contact .contact__header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact__header .contact__title {
-  text-transform: uppercase;
-  font-family: 'Black Han Sans', sans-serif;
-  font-size: 4rem;
-  margin-bottom: 2rem;
-  color: #fff;
-}
-
-.contact__header .contact__sub-title {
-  font-family: 'Do Hyeon', sans-serif;
-  font-size: 2.5rem;
-  color: #ced4da;
-}
-
 .contact__main {
   display: flex;
   justify-content: center;

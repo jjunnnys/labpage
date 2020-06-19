@@ -10,4 +10,5 @@ router.use('/digitalTwin', require('./digitalTwin'));
 router.use('/gallery', require('./gallery'));
 router.use('/member', require('./member'));
 router.use('/research', require('./research'));
+
 module.exports = router;
