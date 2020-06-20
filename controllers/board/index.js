@@ -3,7 +3,7 @@ const router = Router();
 // const ctrl = require('./board.ctrl');
 
 router.get('/', (req, res) => {
-  res.render('board/board-list.html', {});
+  res.render('board/board.html', {});
 });
 
 // router.get('/topic', ctrl.get_topic);
