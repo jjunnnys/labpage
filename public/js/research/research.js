@@ -9,29 +9,23 @@ let ticking = false;
 
 const madalObj = {
   showModal0: () => {
-    modal[0].classList.remove('hidden-modal');
     modal[0].classList.add('show-modal');
   },
   showModal1: () => {
-    modal[1].classList.remove('hidden-modal');
     modal[1].classList.add('show-modal');
   },
   showModal2: () => {
-    modal[2].classList.remove('hidden-modal');
     modal[2].classList.add('show-modal');
   },
 
   hiddenModal0: () => {
     modal[0].classList.remove('show-modal');
-    modal[0].classList.add('hidden-modal');
   },
   hiddenModal1: () => {
     modal[1].classList.remove('show-modal');
-    modal[1].classList.add('hidden-modal');
   },
   hiddenModal2: () => {
     modal[2].classList.remove('show-modal');
-    modal[2].classList.add('hidden-modal');
   },
 };
 

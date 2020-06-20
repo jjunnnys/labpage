@@ -117,17 +117,6 @@
   }
 }
 
-@keyframes hiddenModal {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-50rem);
-    opacity: 0;
-  }
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -143,11 +132,6 @@
 .show-modal {
   display: block;
   animation: showModal 0.5s forwards;
-}
-
-.hidden-modal {
-  display: block;
-  animation: hiddenModal 0.5s forwards;
 }
 
 .modal__btn {
