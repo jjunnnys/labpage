@@ -1,0 +1,111 @@
+{% set title = "게시판 | Digital Twin" %} {% extends "layout/base.html" %} {%
+block css %}
+<link rel="stylesheet" href="css/board/board.css" />
+{% endblock %} {% block script %} {% endblock %} {% block contents%}
+<main class="board">
+  <header class="board__header">
+    <h1 class="board__title">#All</h1>
+    <ul class="board__title-list title-list">
+      <li class="title-list__item">
+        <a href="">
+          All
+        </a>
+      </li>
+      <li class="title-list__item">
+        <a href="">
+          gallery
+        </a>
+      </li>
+      <li class="title-list__item">
+        <a href="">
+          paper
+        </a>
+      </li>
+      <li class="title-list__item">
+        <a href="">
+          news
+        </a>
+      </li>
+    </ul>
+  </header>
+  <section class="board__main">
+    <ol class="board__list posts">
+      <li class="posts__post post">
+        <div class="post__column">
+          <div class="post__img">
+            <img src="/img/course.png" alt="기타" />
+          </div>
+        </div>
+        <div class="post__column">
+          <h2 class="post__title">Digital Twin 기사</h2>
+        </div>
+        <div class="post__column">
+          <p class="post__contents">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            error quasi minima non rem, cum minus, natus doloremque
+            reprehenderit deleniti tenetur ut! Sed, fugit saepe? Distinctio, ut!
+            Ea, eos. Sit!
+          </p>
+        </div>
+        <div class="post__column">
+          <button type="button">더보기</button>
+        </div>
+      </li>
+      <li class="posts__post post">
+        <div class="post__column">
+          <div class="post__img">
+            <img src="/img/course.png" alt="기타" />
+          </div>
+        </div>
+        <div class="post__column">
+          <h2 class="post__title">Digital Twin 기사</h2>
+        </div>
+        <div class="post__column">
+          <p class="post__contents">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
+            fugiat enim, molestiae quaerat magnam nulla, inventore laudantium,
+            deserunt eius veniam error vitae id ipsum deleniti ratione facere!
+            Consequuntur ducimus, recusandae nisi quod natus eligendi
+            perferendis repellat dolore delectus suscipit laudantium laborum,
+            aliquam quos minima dolores dignissimos itaque, placeat
+            necessitatibus corrupti?
+          </p>
+        </div>
+        <div class="post__column">
+          <button type="button">더보기</button>
+        </div>
+      </li>
+      <li class="posts__post post">
+        <div class="post__column">
+          <div class="post__img">
+            <img src="/img/course.png" alt="기타" />
+          </div>
+        </div>
+        <div class="post__column">
+          <h2 class="post__title">Digital Twin 기사</h2>
+        </div>
+        <div class="post__column">
+          <p class="post__contents">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
+            molestiae eligendi animi maxime harum, cupiditate, magni itaque quis
+            quidem labore dolores expedita praesentium quibusdam exercitationem
+            ipsa dicta blanditiis neque sed tempora natus modi repellat. Amet
+            esse hic architecto tempore aliquam aperiam ratione eaque nostrum!
+            Sint incidunt vero, exercitationem quis iusto architecto id eligendi
+            saepe assumenda soluta minima ab temporibus nesciunt optio, aliquid
+            tenetur. Laboriosam assumenda consequatur dolorum, voluptatem nobis
+            asperiores amet maiores. Qui quia autem dolore numquam. Recusandae
+            quaerat, quasi sit ipsam possimus beatae eveniet veniam sed
+            cupiditate accusamus doloremque ipsa eligendi quisquam nesciunt vel
+            rerum voluptatibus quas obcaecati voluptates?
+          </p>
+        </div>
+        <div class="post__column">
+          <button type="button">더보기</button>
+        </div>
+      </li>
+    </ol>
+  </section>
+</main>
+
+{% endblock %}
