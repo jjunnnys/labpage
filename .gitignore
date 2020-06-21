@@ -12,6 +12,6 @@ Desktop.ini
 node_modules
 package-lock.json
 *.log
-yarn.lock
 
+yarn.lock
 .env
