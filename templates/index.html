@@ -1,87 +1,145 @@
 {% set title = "Wellcome | Digital Twin" %} {% extends "./layout/base.html" %}
 {% block css %}
-<link rel="stylesheet" href="css/momentum.css" />
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+  crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="css/main.css" />
 {% endblock %} {% block script %}
-<script defer src="js/momentum/bg.js"></script>
-<script defer src="js/momentum/clock.js"></script>
-<script defer src="js/momentum/greeting.js"></script>
-<script defer src="js/momentum/todo.js"></script>
-<!-- <script src="js/momentum/weather.js"></script> -->
+<script defer src="js/main/bg.js"></script>
 {% endblock %} {% block contents%}
-<section class="momentum-section">
-  <div class="momentum-section__bg js-backgroundImg"></div>
-  <main class="momentum">
-    <!-- Header -->
-    <header class="momentum__header">
-      <div class="momentum__header-wrapper header-wrapper">
-        <div class="header-wrapper__title">
-          Digital Twin Laboratory
-        </div>
-        <div class="header-wrapper__sub-title">
-          동의대학교 정보공학관(23호관) 107호
-        </div>
-      </div>
-    </header>
-
-    <div class="momentum__mobile">
-      <div class="momentum__mobile-btn">
-        <div class="mobile-userImg">
+<header class="js-backgroundImg">
+  <div class="main__header">
+    <div class="main__header-column">
+      <h1 class="main__header-title">
+        Digital Twin Laboratory
+      </h1>
+      <h2 class="main__header-subtitle">
+        동의대학교 정보공학관(23호관) 107호
+      </h2>
+      <div class="main__more">
+        <button type="button">
           <img src="/img/logos/dt-logo.png" alt="digital twin" />
-        </div>
-      </div>
-      <div class="momentum__mobile-wrapper">
-        <div class="momentum__mobile-name mName">
-          <form class="mName__form js-mNameForm">
-            <input type="text" maxlength="4" placeholder="이름을 입력하세요." />
-          </form>
-          <div
-            class="mName__greetings js-mGreetings"
-            style="display: none;"
-          ></div>
-        </div>
+          <span>더보기</span>
+        </button>
       </div>
     </div>
-
-    <div class="momentum__main">
-      <div class="momentum__main-clock js-clock">
-        <h1>00:00</h1>
-      </div>
-
-      <div class="momentum__main-box todos-box">
-        <div class="todos-box__header">
-          <div class="momentum__main-name name">
-            <form class="name__form js-nameForm">
-              <input
-                type="text"
-                maxlength="4"
-                placeholder="이름을 입력하세요."
-              />
-            </form>
-            <div
-              class="name__greetings js-greetings"
-              style="display: none;"
-            ></div>
-          </div>
-          <div class="momentum__main-todos todos">
-            <form class="todos__form js-todoForm">
-              <input type="text" placeholder="오늘 할일을 입력하세요." />
-            </form>
-          </div>
-        </div>
-        <div class="todos-box__hidden">
-          <ul class="todoList js-todoList"></ul>
-        </div>
+    <div class="main__header-column">
+      <div class="main__logo logo">
+        <span class="logo__deu">
+          <img src="img/logos/deu-logo.png" alt="동의대학교" />
+        </span>
       </div>
     </div>
-  </main>
-  <div class="momentum__logo logo">
-    <span class="logo__deu">
-      <img src="img/logos/deu-logo.png" alt="동의대학교" />
-    </span>
   </div>
-  <!-- <div class="momentum__weather">
-    <span class="weather js-weather"></span>
-  </div> -->
-</section>
+</header>
 
-{% endblock %}
+<main class="main">
+  <section class="main__section">
+    <!-- Main Content -->
+    <div class="container-fuild">
+      <ol class="row">
+        <li class="col-lg-4 col-md-6 col-sm-12">
+          <div class="posts--post">
+            <a href="">
+              <h2 class="posts--post__title">
+                digital twin 뉴스
+              </h2>
+              <h3 class="posts--post__subtitle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                quis autem neque quisquam rem, iusto modi nisi aliquam, nemo
+                quae sint. Quaerat amet magni cum ratione natus blanditiis ad
+                ipsam rem molestias maiores velit, nemo eligendi repellendus
+                omnis totam modi voluptatem non et delectus quos dolorem
+                obcaecati. Facere at cupiditate nulla mollitia, totam corrupti
+                ad autem. Aut quae labore ex. Voluptatibus, voluptate numquam
+                fugit enim tempora cumque autem placeat asperiores ipsum nihil
+                aut consectetur sunt non at natus a ex dolorum soluta. Possimus
+                et rem autem illum, eum blanditiis provident consequuntur sed
+                recusandae? Hic dignissimos culpa iure qui recusandae eligendi?
+              </h3>
+            </a>
+            <p class="posts--post__date">
+              Posted by September 24, 2019
+            </p>
+          </div>
+        </li>
+        <li class="col-lg-4 col-md-6 col-sm-12">
+          <div class="posts--post">
+            <a href="">
+              <h2 class="posts--post__title">
+                digital twin 뉴스
+              </h2>
+              <h3 class="posts--post__subtitle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae quis neque perferendis asperiores earum repellat
+                quam, aperiam libero harum nostrum, ipsum debitis veritatis,
+                laudantium accusamus dignissimos dolor sint. Ullam, porro!
+              </h3>
+            </a>
+            <p class="posts--post__date">
+              Posted by September 24, 2019
+            </p>
+          </div>
+        </li>
+        <li class="col-lg-4 col-md-6 col-sm-12">
+          <div class="posts--post">
+            <a href="">
+              <h2 class="posts--post__title">
+                digital twin 뉴스
+              </h2>
+              <h3 class="posts--post__subtitle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae quis neque perferendis asperiores earum repellat
+                quam, aperiam libero harum nostrum, ipsum debitis veritatis,
+                laudantium accusamus dignissimos dolor sint. Ullam, porro!
+              </h3>
+            </a>
+            <p class="posts--post__date">
+              Posted by September 24, 2019
+            </p>
+          </div>
+        </li>
+        <li class="col-lg-4 col-md-6 col-sm-12">
+          <div class="posts--post">
+            <a href="">
+              <h2 class="posts--post__title">
+                digital twin 뉴스
+              </h2>
+              <h3 class="posts--post__subtitle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae quis neque perferendis asperiores earum repellat
+                quam, aperiam libero harum nostrum, ipsum debitis veritatis,
+                laudantium accusamus dignissimos dolor sint. Ullam, porro!
+              </h3>
+            </a>
+            <p class="posts--post__date">
+              Posted by September 24, 2019
+            </p>
+          </div>
+        </li>
+        <li class="col-lg-4 col-md-6 col-sm-12">
+          <div class="posts--post">
+            <a href="">
+              <h2 class="posts--post__title">
+                digital twin 뉴스
+              </h2>
+              <h3 class="posts--post__subtitle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae quis neque perferendis asperiores earum repellat
+                quam, aperiam libero harum nostrum, ipsum debitis veritatis,
+                laudantium accusamus dignissimos dolor sint. Ullam, porro!
+              </h3>
+            </a>
+            <p class="posts--post__date">
+              Posted by September 24, 2019
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+</main>
+{% include "layout/footer.html" %} {% endblock %}
