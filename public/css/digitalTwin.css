@@ -77,6 +77,7 @@
   font-family: 'Do Hyeon', sans-serif;
   font-size: 2rem;
   text-decoration: wavy underline;
+  text-underline-position: under;
   text-decoration-color: #0257a7;
   line-height: 3rem;
   color: #ced4da;
