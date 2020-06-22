@@ -239,7 +239,7 @@ body {
 
   word-wrap: break-word;
   display: -webkit-box;
-  -webkit-line-clamp: 10;
+  -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
 }
 
@@ -343,12 +343,25 @@ body {
   }
 }
 
-@media screen and (max-width: 320px) {
-  .main__header .header-wrapper__title {
-    font-size: 1.5rem;
-    padding: 0 1rem;
+@media screen and (max-width: 375px) {
+  .main .main__section {
+    margin-top: 1rem;
+    padding: 0rem;
   }
-  .main__header .header-wrapper__sub-title {
-    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 320px) {
+  .main__header .main__header-title {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .main__header .main__header-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .main .main__section {
+    margin-top: 1rem;
+    padding: 0rem;
   }
 }
