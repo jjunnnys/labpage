@@ -326,12 +326,23 @@ body {
     font-size: 1rem;
   }
 
-  .main .main__tag {
-    padding: 0 0.5rem;
-  }
-
   .main__more {
     display: none;
+  }
+
+  .main .main__tag {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+  }
+
+  .main__tag .main__tag-list {
+    width: 100vw;
+  }
+
+  .main__search {
+    margin-top: 1rem;
   }
 
   .list__item {
@@ -346,7 +357,7 @@ body {
 @media screen and (max-width: 375px) {
   .main .main__section {
     margin-top: 1rem;
-    padding: 0rem;
+    padding: 0 1rem;
   }
 }
 
@@ -358,10 +369,5 @@ body {
 
   .main__header .main__header-subtitle {
     font-size: 0.8rem;
-  }
-
-  .main .main__section {
-    margin-top: 1rem;
-    padding: 0rem;
   }
 }
