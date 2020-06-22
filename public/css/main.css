@@ -31,6 +31,7 @@ body {
   overflow: hidden;
   z-index: -1;
   animation: fadein 1s ease forwards;
+  box-shadow: rgba(0, 0, 0, 1) 0px 8px 16px -8px;
 }
 
 .main__header {
@@ -66,7 +67,7 @@ body {
   font-size: 8rem;
   font-family: 'Black Han Sans', sans-serif;
   line-height: 1.15;
-  text-shadow: 1px 0 10px #e3fafc, -1px 0 1em #e3fafc;
+  text-shadow: 1px 0 10px #e3fafc, 1px 8px 5px #e3fafc;
 }
 
 .main__header .main__header-subtitle {
@@ -74,7 +75,7 @@ body {
   font-size: 2rem;
   font-family: 'Black Han Sans', sans-serif;
   margin-top: 3rem;
-  text-shadow: 0px 1px 20px #e3fafc, 0px -1px 1.5em #e3fafc;
+  text-shadow: 1px 0 3px #e3fafc, 1px 3px 3px #e3fafc;
   opacity: 0.8;
 }
 
@@ -102,7 +103,7 @@ body {
   height: 5rem;
   background-color: #adb5bd;
   box-shadow: 1px 0 10px #e3fafc, -1px 0 1em #e3fafc;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   margin-top: 5rem;
   transition: box-shadow 0.5s, transform 0.3s, opacity 0.3s;
 }
