@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/main.css" />
 {% endblock %} {% block script %}
 <script defer src="js/main/bg.js"></script>
+<script defer src="js/main/trigger.js"></script>
 {% endblock %} {% block contents%}
 <header class="js-backgroundImg">
   <div class="main__header">
@@ -20,7 +21,7 @@
         동의대학교 정보공학관(23호관) 107호
       </h2>
       <div class="main__more">
-        <button type="button">
+        <button class="js-trigger" type="button">
           <img src="/img/logos/dt-logo.png" alt="digital twin" />
           <span>더보기</span>
         </button>
@@ -37,8 +38,34 @@
 </header>
 
 <main class="main">
+  <section class="main__tag">
+    <ul class="main__tag-list list">
+      <li class="list__item">
+        <button type="menu">
+          #ALL
+        </button>
+      </li>
+      <li class="list__item">
+        <button type="menu">
+          #NEWS
+        </button>
+      </li>
+      <li class="list__item">
+        <button type="menu">
+          #GALLERY
+        </button>
+      </li>
+      <li class="list__item">
+        <button type="menu">
+          #PAPER
+        </button>
+      </li>
+    </ul>
+    <div class="main__search">
+      <i class="fas fa-search"></i>
+    </div>
+  </section>
   <section class="main__section">
-    <!-- Main Content -->
     <div class="container-fuild">
       <ol class="row">
         <li class="col-lg-4 col-md-6 col-sm-12">
