@@ -12,6 +12,15 @@ body {
   width: 100%;
 }
 
+.page-up {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  color: #e7f5ff;
+  font-size: 3rem;
+  z-index: 1;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
