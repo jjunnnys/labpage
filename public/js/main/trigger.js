@@ -2,7 +2,7 @@ const trigger = document.querySelector('.js-trigger');
 
 const triggerHandle = () => {
   window.scrollTo({
-    top: 1000,
+    top: 900,
     left: 100,
     behavior: 'smooth',
   });

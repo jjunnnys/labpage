@@ -151,15 +151,13 @@ body {
 .main__tag .main__tag-list {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
   width: 80%;
 }
 
 .list__item {
   font-family: 'Black Han Sans', sans-serif;
   font-size: 3rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 0.1rem solid #0257a7;
 }
 
 .list__item button {
@@ -267,38 +265,81 @@ body {
   }
 }
 
-@media screen and (max-width: 700px) {
-  .main__header .header-wrapper__title {
-    font-size: 3rem;
-    padding: 0 1rem;
-    text-shadow: 1px 0 5px #e3fafc, -1px 0 0.5em #e3fafc;
+@media screen and (max-width: 1024px) {
+  .main__header {
+    top: 10%;
+    padding: 0 5rem;
   }
-  .main__header .header-wrapper__sub-title {
-    font-size: 1.5rem;
-    text-shadow: 0px 1px 10px #e3fafc, 0px -1px 1em #e3fafc;
-  }
-}
 
-@media screen and (max-width: 470px) {
-  .main__header .header-wrapper__title {
-    font-size: 2.5rem;
-    padding: 0 1rem;
+  .main__header .main__header-title {
+    font-size: 5rem;
+    line-height: 1;
   }
-  .main__header .header-wrapper__sub-title {
-    font-size: 1.2rem;
-  }
-}
 
-@media screen and (max-width: 400px) {
-  .main__header .header-wrapper__title {
+  .main__header .main__header-subtitle {
+    margin-top: 1rem;
+  }
+
+  .main__logo {
+    display: none;
+  }
+
+  .main__tag .main__tag-list {
+    justify-content: space-between;
+  }
+
+  .list__item {
     font-size: 2rem;
-    padding: 0 1rem;
   }
-  .main__header .header-wrapper__sub-title {
+
+  .main__search {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .list__item {
+    font-size: 1.5rem;
+  }
+
+  .main__search {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main {
+    margin-top: 1rem;
+  }
+
+  .main__header {
+    top: 12%;
+    padding: 0 2rem;
+  }
+
+  .main__header .main__header-title {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .main__header .main__header-subtitle {
     font-size: 1rem;
   }
-  .main__logo {
-    width: 13%;
+
+  .main .main__tag {
+    padding: 0 0.5rem;
+  }
+
+  .main__more {
+    display: none;
+  }
+
+  .list__item {
+    font-size: 1rem;
+  }
+
+  .main__search {
+    font-size: 1rem;
   }
 }
 
