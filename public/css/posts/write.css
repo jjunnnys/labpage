@@ -1,0 +1,155 @@
+@import '../base/styles.css';
+
+.write {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 5rem;
+}
+
+.write form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.write__column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.write__title input {
+  font-size: 5rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 0.5rem solid #0257a7;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
+.write__column textarea {
+  width: 60rem;
+  height: 30rem;
+  border: 0.25rem solid #0257a7;
+  font-size: 3rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.write__column:nth-child(3) {
+}
+
+.write__column label {
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 3rem;
+  margin-right: 1rem;
+  color: #dee2e6;
+}
+
+.write__column select {
+  font-size: 2.5rem;
+  width: 15rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 0.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.write__column select option {
+  padding: 1rem;
+}
+
+.write__btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.write__btn-wrapper button {
+  margin: 0 5rem;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 2rem;
+  position: relative;
+  border: none;
+  color: #fff;
+  padding: 1rem;
+  width: 10rem;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #193047;
+  border-radius: 0.5rem;
+  transition-duration: 0.4s;
+}
+
+.write__btn {
+  background-color: #51cf66;
+}
+
+.write__btn:hover {
+  background: #ced4da;
+  box-shadow: 0px 2px 10px 5px #d3f9d8;
+  color: #000;
+}
+
+.write__btn:after {
+  content: '';
+  background: #37b24d;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  border-radius: 1rem;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.write__btn:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.write__btn-del {
+  background-color: #ff6b6b;
+}
+
+.write__btn-del:hover {
+  background: #ced4da;
+  box-shadow: 0px 2px 10px 5px #ffa8a8;
+  color: #000;
+}
+
+.write__btn-del:after {
+  content: '';
+  background: #f03e3e;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  border-radius: 1rem;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.write__btn-del:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
