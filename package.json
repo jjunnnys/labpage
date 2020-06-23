@@ -17,6 +17,6 @@
     "morgan": "1.10.0",
     "mysql2": "2.1.0",
     "nunjucks": "3.2.1",
-    "sequelize": "4.42.0"
+    "sequelize": "5.15.1"
   }
 }
