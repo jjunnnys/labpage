@@ -30,5 +30,6 @@
   font-size: 3vw;
   padding: 1rem;
   border: 10px solid #1864ab;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
 }

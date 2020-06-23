@@ -1,6 +1,8 @@
-{% set title = "상세 페이지" %} {% extends "layout/base.html" %} {% block css %}
+{% set title = posts.title %} {% extends "layout/base.html" %} {% block css %}
 <link rel="stylesheet" href="/css/posts/detail.css" />
-{% endblock %} {% block script %} {% endblock %} {% block contents%}
+{% endblock %} {% block script %}
+<script defer src="/js/detail/detail.js"></script>
+{% endblock %} {% block contents%}
 <section class="detail">
   <div class="detail__column">
     <h1 class="detail__title">
@@ -14,7 +16,7 @@
   </div>
   <div class="detail__column">
     <div class="detail__tag">
-      {{ posts.tag }}
+      카테고리 : {{ posts.tag }}
     </div>
   </div>
   <div class="detail__column">
@@ -24,7 +26,21 @@
   </div>
   <div class="detail__column">
     <a href="/">목록으로</a>
-    <a href="/edit/{{ posts.id }}">수정</a>
+    <a class="js-valid" href="/edit/{{ posts.id }}" style="display: none;"
+      >수정</a
+    >
   </div>
 </section>
+<div id="disqus_thread"></div>
+<script>
+  (function () {
+    // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement('script');
+    s.src = 'https://digitaltwin-deu-ac-kr-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+
 {% include "layout/footer.html" %}{% endblock %}

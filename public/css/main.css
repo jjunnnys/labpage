@@ -157,35 +157,32 @@ body {
   color: #e9ecef;
 }
 
-.main__tag .main__tag-list {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  width: 80%;
-}
-
-.list__item {
-  font-family: 'Black Han Sans', sans-serif;
+.main__write {
   font-size: 3rem;
 }
 
-.list__item button {
-  color: #e9ecef;
-  transition: color 0.5s, transform 0.5s;
+.main__write a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.list__item button:hover {
-  color: #adb5bd;
-  transform: scale(1.1);
+.main__write a:hover i {
+  color: #0257a7;
 }
 
-.list__itme-active {
-  color: #adb5bd;
-  transform: scale(1.1);
+.main__tag-form {
 }
 
-.main__search {
+.main__tag-form input {
+  font-family: 'Do Hyeon', sans-serif;
+  width: 30vw;
+  height: 5rem;
+  border: none;
   font-size: 3rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 0.25rem solid #0257a7;
 }
 
 .main .main__section {
@@ -293,25 +290,13 @@ body {
     display: none;
   }
 
-  .main__tag .main__tag-list {
-    justify-content: space-between;
-  }
-
-  .list__item {
-    font-size: 2rem;
-  }
-
-  .main__search {
+  .main__write {
     font-size: 2rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .list__item {
-    font-size: 1.5rem;
-  }
-
-  .main__search {
+  .main__write {
     font-size: 1.5rem;
   }
 }
@@ -346,19 +331,11 @@ body {
     margin-bottom: 2rem;
   }
 
-  .main__tag .main__tag-list {
-    width: 100vw;
-  }
-
-  .main__search {
+  .main__write {
     margin-top: 1rem;
   }
 
-  .list__item {
-    font-size: 1rem;
-  }
-
-  .main__search {
+  .main__write {
     font-size: 1rem;
   }
 }

@@ -1,5 +1,9 @@
 @import '../base/styles.css';
 
+body {
+  min-height: 100vh;
+}
+
 .detail {
   display: flex;
   flex-direction: column;
@@ -7,7 +11,6 @@
   justify-content: flex-start;
   margin-top: 5rem;
   padding: 3rem;
-  min-height: 100vh;
   width: 100%;
 }
 
@@ -20,19 +23,29 @@
   font-family: 'Black Han Sans', sans-serif;
   font-size: 6rem;
   text-align: left;
+  padding-bottom: 1rem;
+  color: #343a40;
+  border-bottom: 0.25rem solid #495057;
 }
 
 .detail__description {
   font-family: 'Do Hyeon', sans-serif;
   font-size: 4rem;
   text-align: left;
+  padding-left: 1rem;
   margin-bottom: 2rem;
+  color: #adb5bd;
 }
 
 .detail__tag {
   font-family: 'Sunflower', sans-serif;
   font-size: 3rem;
+  padding: 2rem;
   text-align: right;
+  color: #adb5bd;
+  text-decoration: wavy underline;
+  text-underline-position: under;
+  text-decoration-color: #0257a7;
 }
 
 .detail__date {
@@ -44,10 +57,57 @@
 .detail .detail__column:last-child {
   font-size: 3rem;
   margin-top: 3rem;
+  margin-bottom: 0;
   text-align: center;
 }
 
 .detail__column:last-child a {
   font-family: 'Do Hyeon', sans-serif;
+  color: #343a40;
   margin: 0 2rem;
+  transition: color 0.3s;
+  font-size: 3rem;
+}
+
+.detail__column:last-child a:hover {
+  color: #0257a7;
+}
+
+#disqus_thread {
+  background-color: #e7f5ff;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .detail {
+    padding: 1rem;
+  }
+
+  .detail .detail__column {
+    margin-bottom: 2rem;
+  }
+
+  .detail__title {
+    font-size: 6vw;
+    padding-bottom: 1rem;
+  }
+
+  .detail__description {
+    font-size: 3.5vw;
+    margin-bottom: 1rem;
+  }
+
+  .detail__tag {
+    font-size: 3vw;
+  }
+
+  .detail__date {
+    font-size: 2vw;
+  }
+
+  .detail__column:last-child a {
+    margin: 0 2rem;
+    font-size: 8vw;
+  }
 }

@@ -17,13 +17,10 @@
       <textarea
         name="description"
         id="description"
-        cols="30"
-        rows="10"
         placeholder="내용을 작성하세요."
       >
-{{ posts.description }}
-    </textarea
-      >
+        {{ posts.description }}
+      </textarea>
     </div>
     <div class="write__column">
       <label for="tag">카테고리 선택</label>
@@ -35,11 +32,18 @@
     </div>
     <div class="write__btn-wrapper">
       <button type="submit" class="write__btn">작성하기</button>
+
+      {% if posts.title %}
       <a
         href="/edit/delete/{{ posts.id }}"
         onclick="return confirm('삭제하시겠습니까?')"
         ><button type="button" class="write__btn-del">삭제하기</button></a
       >
+      {% else %}
+      <a href="/"
+        ><button type="button" class="write__btn-del">뒤로가기</button></a
+      >
+      {% endif %}
     </div>
   </form>
 </section>

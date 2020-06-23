@@ -10,6 +10,7 @@
 {% endblock %} {% block script %}
 <script defer src="js/main/bg.js"></script>
 <script defer src="js/main/trigger.js"></script>
+<script defer src="js/main/valid.js"></script>
 {% endblock %} {% block contents%}
 <header class="js-backgroundImg">
   <div class="main__header">
@@ -38,31 +39,15 @@
 </header>
 
 <main class="main">
+  <form class="main__tag-form">
+    <input type="text" placeholder="관리자 확인" />
+  </form>
   <section class="main__tag">
-    <ul class="main__tag-list list">
-      <li class="list__item">
-        <button type="menu">
-          #ALL
-        </button>
-      </li>
-      <li class="list__item">
-        <button type="menu">
-          #NEWS
-        </button>
-      </li>
-      <li class="list__item">
-        <button type="menu">
-          #GALLERY
-        </button>
-      </li>
-      <li class="list__item">
-        <button type="menu">
-          #PAPER
-        </button>
-      </li>
-    </ul>
-    <div class="main__search">
-      <i class="fas fa-search"></i>
+    <div class="main__write" style="display: none;">
+      <a href="/write">
+        <span>글 쓰기</span>
+        <i class="fas fa-plus-circle"></i>
+      </a>
     </div>
   </section>
   <section class="main__section">
@@ -93,4 +78,5 @@
 <button type="button" class="page-up js-page-up">
   <i class="fas fa-angle-double-up"></i>
 </button>
+
 {% include "layout/footer.html" %} {% endblock %}
