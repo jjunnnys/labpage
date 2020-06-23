@@ -68,103 +68,23 @@
   <section class="main__section">
     <div class="container-fuild">
       <ol class="row">
+        {% for post in posts %}
         <li class="col-lg-4 col-md-6 col-sm-12">
           <div class="posts--post">
-            <a href="">
+            <a href="/detail/{{ post.id }}">
               <h2 class="posts--post__title">
-                digital twin 뉴스
+                {{post.title}}
               </h2>
               <h3 class="posts--post__subtitle">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                quis autem neque quisquam rem, iusto modi nisi aliquam, nemo
-                quae sint. Quaerat amet magni cum ratione natus blanditiis ad
-                ipsam rem molestias maiores velit, nemo eligendi repellendus
-                omnis totam modi voluptatem non et delectus quos dolorem
-                obcaecati. Facere at cupiditate nulla mollitia, totam corrupti
-                ad autem. Aut quae labore ex. Voluptatibus, voluptate numquam
-                fugit enim tempora cumque autem placeat asperiores ipsum nihil
-                aut consectetur sunt non at natus a ex dolorum soluta. Possimus
-                et rem autem illum, eum blanditiis provident consequuntur sed
-                recusandae? Hic dignissimos culpa iure qui recusandae eligendi?
+                {{post.description}}
               </h3>
             </a>
             <p class="posts--post__date">
-              Posted by September 24, 2019
+              Posted by {{ post.dateFormat( post.createdAt ) }}
             </p>
           </div>
         </li>
-        <li class="col-lg-4 col-md-6 col-sm-12">
-          <div class="posts--post">
-            <a href="">
-              <h2 class="posts--post__title">
-                digital twin 뉴스
-              </h2>
-              <h3 class="posts--post__subtitle">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repudiandae quis neque perferendis asperiores earum repellat
-                quam, aperiam libero harum nostrum, ipsum debitis veritatis,
-                laudantium accusamus dignissimos dolor sint. Ullam, porro!
-              </h3>
-            </a>
-            <p class="posts--post__date">
-              Posted by September 24, 2019
-            </p>
-          </div>
-        </li>
-        <li class="col-lg-4 col-md-6 col-sm-12">
-          <div class="posts--post">
-            <a href="">
-              <h2 class="posts--post__title">
-                digital twin 뉴스
-              </h2>
-              <h3 class="posts--post__subtitle">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repudiandae quis neque perferendis asperiores earum repellat
-                quam, aperiam libero harum nostrum, ipsum debitis veritatis,
-                laudantium accusamus dignissimos dolor sint. Ullam, porro!
-              </h3>
-            </a>
-            <p class="posts--post__date">
-              Posted by September 24, 2019
-            </p>
-          </div>
-        </li>
-        <li class="col-lg-4 col-md-6 col-sm-12">
-          <div class="posts--post">
-            <a href="">
-              <h2 class="posts--post__title">
-                digital twin 뉴스
-              </h2>
-              <h3 class="posts--post__subtitle">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repudiandae quis neque perferendis asperiores earum repellat
-                quam, aperiam libero harum nostrum, ipsum debitis veritatis,
-                laudantium accusamus dignissimos dolor sint. Ullam, porro!
-              </h3>
-            </a>
-            <p class="posts--post__date">
-              Posted by September 24, 2019
-            </p>
-          </div>
-        </li>
-        <li class="col-lg-4 col-md-6 col-sm-12">
-          <div class="posts--post">
-            <a href="">
-              <h2 class="posts--post__title">
-                digital twin 뉴스
-              </h2>
-              <h3 class="posts--post__subtitle">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repudiandae quis neque perferendis asperiores earum repellat
-                quam, aperiam libero harum nostrum, ipsum debitis veritatis,
-                laudantium accusamus dignissimos dolor sint. Ullam, porro!
-              </h3>
-            </a>
-            <p class="posts--post__date">
-              Posted by September 24, 2019
-            </p>
-          </div>
-        </li>
+        {% endfor %}
       </ol>
     </div>
   </section>

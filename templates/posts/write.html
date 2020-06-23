@@ -1,41 +1,47 @@
-{set title = ""}{% extends "../layout/base.html" %} {% block css %}
-<link rel="stylesheet" href="css/posts/write.css" />
+{% set title = "새 글 작성" %}{% extends "layout/base.html" %} {% block css %}
+<link rel="stylesheet" href="/css/posts/write.css" />
 {% endblock %} {% block script %} {% endblock %} {% block contents%}
 <section class="write">
-  <form action="" method="post">
+  <form action="" method="POST">
     <div class="write__column">
       <h1 class="write__title">
         <input
           type="text"
-          name="name"
+          name="title"
           placeholder="제목을 입력하세요."
-          value="{{ product.name }}"
+          value="{{ posts.title }}"
         />
       </h1>
     </div>
     <div class="write__column">
       <textarea
-        name="contents"
-        id="contents"
+        name="description"
+        id="description"
         cols="30"
         rows="10"
-        value="{{ product.contents }}"
         placeholder="내용을 작성하세요."
-      ></textarea>
+      >
+{{ posts.description }}
+    </textarea
+      >
     </div>
     <div class="write__column">
       <label for="tag">카테고리 선택</label>
-      <select id="tag">
+      <select id="tag" name="tag">
         <option value="news" selected>news</option>
         <option value="gallery">gallery</option>
         <option value="paper">paper</option>
       </select>
     </div>
+    <div class="write__btn-wrapper">
+      <button type="submit" class="write__btn">작성하기</button>
+      <a
+        href="/edit/delete/{{ posts.id }}"
+        onclick="return confirm('삭제하시겠습니까?')"
+        ><button type="button" class="write__btn-del">삭제하기</button></a
+      >
+    </div>
   </form>
-  <div class="write__btn-wrapper">
-    <button type="submit" class="write__btn">작성하기</button>
-    <button type="submit" class="write__btn-del">삭제하기</button>
-  </div>
 </section>
 
 <script></script>

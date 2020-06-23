@@ -249,6 +249,7 @@
 .itmes__item-etc dt span {
   font-size: 1.3rem;
   text-decoration: wavy underline;
+  text-underline-position: under;
   text-decoration-color: #0257a7;
 }
 

@@ -1,13 +1,18 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
+const logger = require('morgan');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const helmet = require('helmet');
+const db = require('./models');
 
 class App {
   // 생성자
   constructor() {
     this.app = express();
+
+    // db 접속
+    this.dbConnection();
 
     // 뷰엔진 셋팅
     this.setViewEngine();
@@ -25,10 +30,30 @@ class App {
     this.getRouting();
 
     // // 404 페이지를 찾을수가 없음
-    // this.status404();
+    this.status404();
 
     // // 에러처리
-    // this.errorHandler();
+    this.errorHandler();
+  }
+
+  dbConnection() {
+    db.sequelize
+      .authenticate()
+      .then(() => {
+        console.log(
+          '🔥Connection has been established successfully. (성공적으로 연결되었습니다.)'
+        );
+      })
+      .then(() => {
+        console.log('👉DB Sync complete. (DB 동기화가 완료되었습니다.)');
+        // return db.sequelize.sync();
+      })
+      .catch((err) => {
+        console.error(
+          '❌Unable to connect to the database (데이터베이스에 연결할 수 없습니다.): ',
+          err
+        );
+      });
   }
 
   // 미들웨어 셋팅
@@ -40,6 +65,7 @@ class App {
     */
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: false }));
+    this.app.use(logger('dev'));
 
     /* 
       파일의 크기를 줄여줌 
@@ -82,20 +108,20 @@ class App {
     this.app.use(require('./controllers'));
   }
 
-  //   status404() {
-  //     this.app.use((req, res, _) => {
-  //       res.status(404).render("common/404.html");
-  //     });
-  //   }
+  status404() {
+    this.app.use((req, res, _) => {
+      res.status(404).render('common/404.html');
+    });
+  }
 
-  //   errorHandler() {
-  /*
-            next('err')가 발생하면 어떤 미들웨거가 등록되어 있는지 여부와 상관없이 밑에 코드가 실행된다.
-          */
-  //     this.app.use((err, req, res, _) => {
-  //       res.status(500).render("common/500.html");
-  //     });
-  //   }
+  errorHandler() {
+    /*
+      next('err')가 발생하면 어떤 미들웨거가 등록되어 있는지 여부와 상관없이 밑에 코드가 실행된다.
+    */
+    this.app.use((err, req, res, _) => {
+      res.status(500).render('common/500.html');
+    });
+  }
 }
 
 module.exports = new App().app;

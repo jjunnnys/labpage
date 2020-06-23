@@ -1,0 +1,53 @@
+@import '../base/styles.css';
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 5rem;
+  padding: 3rem;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.detail .detail__column {
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.detail__title {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 6rem;
+  text-align: left;
+}
+
+.detail__description {
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 4rem;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.detail__tag {
+  font-family: 'Sunflower', sans-serif;
+  font-size: 3rem;
+  text-align: right;
+}
+
+.detail__date {
+  font-family: 'Sunflower', sans-serif;
+  font-size: 2rem;
+  text-align: right;
+}
+
+.detail .detail__column:last-child {
+  font-size: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.detail__column:last-child a {
+  font-family: 'Do Hyeon', sans-serif;
+  margin: 0 2rem;
+}

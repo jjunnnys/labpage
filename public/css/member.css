@@ -230,6 +230,7 @@
   font-size: 1.25rem;
   color: #343a40;
   text-decoration: wavy underline #1971c2;
+  text-underline-position: under;
 }
 
 .alumni__row .alumni__column:nth-child(2) .alumni__itmes:nth-child(2) dt {

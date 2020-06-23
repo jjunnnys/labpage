@@ -1,10 +1,30 @@
-{set title = ""}{% extends "/layout/base.html" %} {% block css %}
-<link
-  rel="stylesheet"
-  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-  crossorigin="anonymous"
-/>
-<link rel="stylesheet" href="css/main.css" />
-{% endblock %} {% block script %} {% endblock %} {% block contents%} {%
-include"layout/footer.html" %}{% endblock %}
+{% set title = "상세 페이지" %} {% extends "layout/base.html" %} {% block css %}
+<link rel="stylesheet" href="/css/posts/detail.css" />
+{% endblock %} {% block script %} {% endblock %} {% block contents%}
+<section class="detail">
+  <div class="detail__column">
+    <h1 class="detail__title">
+      {{ posts.title }}
+    </h1>
+  </div>
+  <div class="detail__column">
+    <div class="detail__description">
+      {{ posts.description }}
+    </div>
+  </div>
+  <div class="detail__column">
+    <div class="detail__tag">
+      {{ posts.tag }}
+    </div>
+  </div>
+  <div class="detail__column">
+    <div class="detail__date">
+      작성일 : {{ posts.dateFormat( posts.createdAt ) }}
+    </div>
+  </div>
+  <div class="detail__column">
+    <a href="/">목록으로</a>
+    <a href="/edit/{{ posts.id }}">수정</a>
+  </div>
+</section>
+{% include "layout/footer.html" %}{% endblock %}

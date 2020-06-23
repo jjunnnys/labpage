@@ -1,0 +1,34 @@
+@import './base/styles.css';
+
+@keyframes showError {
+  from {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.page-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: showError 1s forwards;
+}
+
+.page-error h1 {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 10vw;
+}
+
+.page-error a {
+  margin-top: 10%;
+  font-size: 3vw;
+  padding: 1rem;
+  border: 10px solid #1864ab;
+  border-radius: 1rem;
+}

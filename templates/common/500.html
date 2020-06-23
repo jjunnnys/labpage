@@ -1,0 +1,11 @@
+{% set title = "error" %}{% extends "../layout/base.html" %} {% block css %}
+<link rel="stylesheet" href="css/error.css" />
+{% endblock %} {% block script %} {% endblock %} {% block contents%}
+<section class="page-error">
+  <h1>에러가 발생했습니다.</h1>
+  <a href="/">
+    홈으로
+  </a>
+</section>
+
+{% include "layout/footer.html" %}{% endblock %}
