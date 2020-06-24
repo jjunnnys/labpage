@@ -1,0 +1,177 @@
+@import './base/styles.css';
+
+body {
+  min-height: 100vh;
+}
+
+blockquote {
+  border-left: 0.5rem solid #0257a7;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 2rem;
+  color: black;
+  margin: 2rem 0;
+  line-height: 1.25;
+}
+
+blockquote i {
+  font-style: italic;
+  color: #343a40;
+}
+
+b {
+  display: block;
+  width: 100%;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-decoration: wavy underline #0257a7;
+  text-underline-position: under;
+}
+
+#coment {
+  margin-top: 10rem;
+}
+
+ol {
+  list-style: decimal-leading-zero;
+  font-size: 2.5rem;
+}
+
+ol li {
+  padding-left: 1rem;
+  margin-top: 5rem;
+}
+
+li p {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+li i {
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+li i u {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.tutorial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 5rem;
+  padding: 3rem;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.tutorial .tutorial__column {
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.tutorial__title {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 6rem;
+  text-align: left;
+  padding-bottom: 1rem;
+  color: #343a40;
+  border-bottom: 0.25rem solid #495057;
+}
+
+.tutorial__description {
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 4rem;
+  text-align: left;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  color: #f1f3f5;
+}
+
+.tutorial__description img {
+  display: block;
+  max-width: 60%;
+  border-radius: 0.5rem;
+  border: 0.5rem solid rgba(0, 0, 0, 0.5);
+  margin-top: 2.5rem;
+}
+
+.tutorial__tag {
+  font-family: 'Sunflower', sans-serif;
+  font-size: 3rem;
+  padding: 2rem;
+  text-align: right;
+  color: #adb5bd;
+  text-decoration: wavy underline;
+  text-underline-position: under;
+  text-decoration-color: #0257a7;
+}
+
+.tutorial__date {
+  font-family: 'Sunflower', sans-serif;
+  font-size: 2rem;
+  text-align: right;
+}
+
+.tutorial .tutorial__column:last-child {
+  font-size: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.tutorial__column:last-child a {
+  font-family: 'Do Hyeon', sans-serif;
+  color: #343a40;
+  margin: 0 2rem;
+  transition: color 0.3s;
+  font-size: 3rem;
+}
+
+.tutorial__column:last-child a:hover {
+  color: #0257a7;
+}
+
+#disqus_thread {
+  background-color: #e7f5ff;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .tutorial {
+    padding: 1rem;
+  }
+
+  .tutorial .tutorial__column {
+    margin-bottom: 2rem;
+  }
+
+  .tutorial__title {
+    font-size: 6vw;
+    padding-bottom: 1rem;
+  }
+
+  .tutorial__description {
+    font-size: 3.5vw;
+    margin-bottom: 1rem;
+  }
+
+  .tutorial__tag {
+    font-size: 3vw;
+  }
+
+  .tutorial__date {
+    font-size: 2vw;
+  }
+
+  .tutorial__column:last-child a {
+    margin: 0 2rem;
+    font-size: 8vw;
+  }
+}

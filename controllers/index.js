@@ -14,6 +14,7 @@ router.get('/', async (req, res) => {
   });
 });
 
+router.use('/tutorial', require('./tutorial'));
 router.use('/contact', require('./contact'));
 router.use('/digitalTwin', require('./digitalTwin'));
 router.use('/gallery', require('./gallery'));
