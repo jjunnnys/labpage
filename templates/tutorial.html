@@ -1,0 +1,126 @@
+{% set title = "사용법 | Digital Twin" %} {% extends "./layout/base.html" %} {%
+block css %}
+<link rel="stylesheet" href="css/tutorial.css" />
+{% endblock %} {% block script %} {% endblock %} {% block contents%}
+<main class="tutorial">
+  <div class="tutorial__column">
+    <h1 class="tutorial__title">
+      튜토리얼
+    </h1>
+  </div>
+  <div class="tutorial__column">
+    <section class="tutorial__description">
+      <blockquote>
+        <i>이 글은 게시판 기능과 댓글 기능을 알려주는 글입니다.</i><br />
+        목차<br />
+        <a href="#admin">1. 게시글 작성</a><br />
+        <a href="#coment">2. 댓글 작성</a>
+      </blockquote>
+      <b id="admin">게시글 작성</b>
+      <ol>
+        <li>
+          <p>글 작성하기</p>
+          <img src="./img/tutorial/admin1.png" alt="관리자 확인 폼" />
+          <i>메인 페이지에서 관리자 확인란 클릭</i>
+          <img src="./img/tutorial/admin2.png" alt="관리자 확인 폼 입력" />
+          <i>
+            ex. 현재 시간이 15:17이면 <u>17107호</u> 입력<br />
+            ( 맞으면 새로고침이 되면서 다음화면으로 넘어 감, 틀리면 변화없음 )
+          </i>
+          <img src="./img/tutorial/admin3.png" alt="글쓰기 버튼" />
+          <i>글쓰기 버튼이 생기면 클릭</i>
+          <img src="./img/tutorial/admin4.png" alt="글쓰기 폼" />
+          <i>
+            글 작성 형식에 맞게 작성 후 작성하기 버튼 누르기 <br />
+            ( 이전 페이지로 가고 싶으면 뒤로가기 버튼 누르기 )
+          </i>
+          <img src="./img/tutorial/admin5.png" alt="글 작성 확인" />
+          <i>
+            글 작성이 완료 되면 메인화면으로 이동 됨 <br />
+            ( 게시물 카드에 글이 등록되 있는 걸 확인 )
+          </i>
+        </li>
+        <li>
+          <p>글 수정하기</p>
+          <img src="./img/tutorial/admin6.png" alt="글 수정" />
+          <i>
+            수정하고 싶은 글(카드)을 클릭 <br />
+            게시글 페이지로 들어오면 밑에 수정하기 버튼 클릭 <br />
+          </i>
+          <img src="./img/tutorial/admin7.png" alt="글 수정 확인" />
+          <i>
+            수정 후 작성하기 버튼 누르면 수정 됨
+          </i>
+        </li>
+        <li>
+          <p>글 삭제하기</p>
+          <img src="./img/tutorial/admin7.png" alt="글 수정 삭제" />
+          <i>
+            수정 버튼을 누른 뒤 글 페이지 나오면 삭제하기 버튼을 누름
+          </i>
+        </li>
+      </ol>
+      <b id="coment">댓글 작성</b>
+      <ol>
+        <li>
+          <p>댓글 작성</p>
+          <img src="./img/tutorial/coment1.png" alt="댓글 확인" />
+          <i>게시글 바닥에 댓글 작성란 확인</i>
+          <img src="./img/tutorial/coment2.png" alt="댓글 로그인" />
+          <i>
+            댓글 작성을 위한 로그인, 원하는 방식으로 로그인 <br />
+            ( 오른쪽 위에 있음 )
+          </i>
+          <img src="./img/tutorial/coment3.png" alt="로그인 완료" />
+          <i>
+            로그인이 완료되면 사용자 정보가 표시됨
+          </i>
+          <img src="./img/tutorial/coment4.png" alt="댓글 작성" />
+          <i>
+            댓글 창에 작성 후 댓글 달기 클릭 <br />
+            ( 밑에 아이콘들로 원하는 형식으로 작성 )
+          </i>
+          <img src="./img/tutorial/coment5.png" alt="댓글 작성 확인" />
+          <i>
+            댓글 확인 <br />
+            ( '좋아요'와 '싫어요' 가능 )
+          </i>
+        </li>
+        <li>
+          <p>댓글 삭제</p>
+          <img src="./img/tutorial/coment6.png" alt="댓글 삭제" />
+          <i>
+            본인 댓글의 오른 쪽 끝에 있는 탭을 클릭 후 삭제 <br />
+            ( 위 사진은 관리자 화면 )
+          </i>
+        </li>
+      </ol>
+    </section>
+  </div>
+  <div class="tutorial__column">
+    <div class="tutorial__tag">
+      카테고리 : tutorial
+    </div>
+  </div>
+  <div class="tutorial__column">
+    <div class="tutorial__date">
+      작성일 : 2020년 06월 24일
+    </div>
+  </div>
+  <div class="tutorial__column">
+    <a href="/">목록으로</a>
+  </div>
+</main>
+<div id="disqus_thread"></div>
+<script>
+  (function () {
+    // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement('script');
+    s.src = 'https://digitaltwin-deu-ac-kr-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+
+{% include "layout/footer.html" %}{% endblock %}

@@ -45,7 +45,7 @@
   <section class="main__tag">
     <div class="main__write" style="display: none;">
       <a href="/write">
-        <span>글 쓰기</span>
+        <span>글쓰기</span>
         <i class="fas fa-plus-circle"></i>
       </a>
     </div>
@@ -53,6 +53,23 @@
   <section class="main__section">
     <div class="container-fuild">
       <ol class="row">
+        <li class="col-lg-4 col-md-6 col-sm-12">
+          <div class="posts--post">
+            <a href="/tutorial">
+              <h2 class="posts--post__title">
+                게시판 사용법
+              </h2>
+              <h3 class="posts--post__subtitle">
+                =========================================게시글 작성 방법과
+                게시글의 댓글 작성 방법을 확인하려면 카드를
+                클릭하세요=========================================
+              </h3>
+            </a>
+            <p class="posts--post__date">
+              Posted by : 2020년 06월 24일
+            </p>
+          </div>
+        </li>
         {% for post in posts %}
         <li class="col-lg-4 col-md-6 col-sm-12">
           <div class="posts--post">
