@@ -228,6 +228,12 @@
 }
 
 @media screen and (max-width: 950px) {
+  .nav .nav__logo {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 950px) {
   .nav .nav__column:nth-child(2) {
     display: none;
   }

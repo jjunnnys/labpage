@@ -1,6 +1,5 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
-const logger = require('morgan');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const helmet = require('helmet');
@@ -65,7 +64,6 @@ class App {
     */
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: false }));
-    this.app.use(logger('dev'));
 
     /* 
       파일의 크기를 줄여줌 
