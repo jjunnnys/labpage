@@ -299,6 +299,10 @@ body {
   .main__write {
     font-size: 1.5rem;
   }
+
+  .main__more {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 414px) {
@@ -318,10 +322,6 @@ body {
 
   .main__header .main__header-subtitle {
     font-size: 1rem;
-  }
-
-  .main__more {
-    display: none;
   }
 
   .main .main__tag {

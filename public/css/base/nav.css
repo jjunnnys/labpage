@@ -227,13 +227,10 @@
   transform: scale(2);
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1024px) {
   .nav .nav__logo {
     font-size: 5vw;
   }
-}
-
-@media screen and (max-width: 950px) {
   .nav .nav__column:nth-child(2) {
     display: none;
   }
