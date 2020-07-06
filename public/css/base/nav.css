@@ -24,7 +24,7 @@
 }
 
 .nav .nav__logo {
-  font-size: 2rem;
+  width: 4rem;
   font-family: 'Kaushan Script', cursive;
   color: #339af0;
   transition: color 0.3s, transform 0.3s;
@@ -33,6 +33,10 @@
 .nav__logo:hover {
   color: #0257a7;
   transform: scale(1.1);
+}
+
+.nav .nav__logo img {
+  width: 100%;
 }
 
 .nav .nav__contents {
@@ -229,7 +233,7 @@
 
 @media screen and (max-width: 1024px) {
   .nav .nav__logo {
-    font-size: 5vw;
+    width: 5vw;
   }
   .nav .nav__column:nth-child(2) {
     display: none;

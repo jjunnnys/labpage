@@ -5,13 +5,17 @@ const models = require('../models');
 const router = Router();
 
 router.get('/', async (req, res) => {
-  const posts = await models.Posts.findAll({
-    // 내림차순 (최신 순으로 봐야하기 때문에)
-    order: [['id', 'DESC']],
-  });
-  res.render('index.html', {
-    posts,
-  });
+  try {
+    const posts = await models.Posts.findAll({
+      // 내림차순 (최신 순으로 봐야하기 때문에)
+      order: [['id', 'DESC']],
+    });
+    res.render('index.html', {
+      posts,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 router.use('/tutorial', require('./tutorial'));

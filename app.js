@@ -45,7 +45,7 @@ class App {
       })
       .then(() => {
         console.log('👉DB Sync complete. (DB 동기화가 완료되었습니다.)');
-        // return db.sequelize.sync();
+        return db.sequelize.sync();
       })
       .catch((err) => {
         console.error(
